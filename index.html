@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <meta name="description" content="Coach professionnelle qui accompagne une personne en recherche d'emploi">
+    <meta name="keywords" content="coach professionnelle, accompagnement, recherche emploi">
+    <title>MyCoachProfessionnelle</title>
+    <!-- Lien Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+    <!-- Lien vers fichier CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Lien FontAwsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <!-- =========================
+             MENU BURGER (BOOTSTRAP)
+             Navbar responsive     
+             - navbar-toggler : bouton hamburger
+             - data-bs-toggle="collapse" : ouvre/ferme le menu
+             - data-bs-target : cible le menu à afficher
+             - navbar-collapse : contenu qui se replie sur mobile
+        ========================= -->
+        <nav class="navbar navbar-expand-lg" aria-label="menu burger">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a id="logo"><i class="fa-regular fa-star" style="color: whitesmoke;"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html" class="textaccueil"> ACCUEIL</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/pages/presentation.html" id="presentation">PRESENTATION</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/pages/portfolio.html">PORTFOLIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/pages/contact.html">CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/pages/connexion.html" id="connexion">SE CONNECTER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href=""></a>
+                        </li>
+                        <li class="nav-item" id="fondbleu">
+                            <a id="iconrdv">
+                                <i class="fa-solid fa-calendar-days" style="color: whitesmoke;"></i></a>
+                            <a href="pages/rendezvous.html">1er RENDEZ-VOUS GRATUIT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bannercoach">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-8" id="coachtext1">
+                        <h1>
+                            <p>Dominique Nash</p>
+                            <p>Coach<span id="bloc">Professionnelle</span></p>
+                            <p>Certifiée</p>
+                        </h1>
+                    </div>
+                    <span id="coachtext2"><em>25 ans d'expérience dans l'<strong>Accompagnement</strong></em></span>
+                </div>
+               <div><a id="rowbutton" href="#"><strong>VOIR MON TRAVAIL</strong></a></div>
+                <div id="iconlocation">
+                    <i class="fa-solid fa-globe" style="color: rgb(246, 247, 247);"></i>
+                    Région Nouvelle Aquitaine - Bayonne, Anglet, Biarritz, Boucau, Tarnos
+                </div>
+            </div>
+        </section>
+        <section class="bannervaleur">
+            <!-- Mes valeurs -->
+            <div class="bandeau">
+                <i class="fas fa-bell icone"></i>
+                <span>Mes valeurs : Ethique - Ecoute - Déontologie - Théologie école Palo Alto -
+                    Hypnose</span><i class="fas fa-bell icone"></i>
+            </div>
+        </section>
+        <section class="section-accompagne">
+            <h2 class="card-title">
+                <p>Comment puis je</p>
+                <p>vous accompagner ?</p>
+            </h2>
+            <!-- /* =========================
+              EFFETS CSS : HOVER + TRANSFORM + ANIMATION
+              Class:categories
+             ========================= */ -->
+            <div class="accompagnements">
+                <a href="" class="accompagnements-card" id="card">
+                    <img src="assets/images/accompagneindivi.jpg" alt="accompagnement individuel">
+                    <span>INDIVIDUEL</span>
+                </a>
+                <a href="" class="accompagnements-card" id="card">
+                    <img src="assets/images/accompagncollectif.webp" alt="accompagnement collectidf equipe">
+                    <span>COLLECTIF</span>
+                </a>
+                <a href="" class="accompagnements-card" id="card">
+                    <img src="assets/images/projet cible.jpg" alt="projet personnel professionnel">
+                    <span>PROJETS PERSONNEL PROFESSIONNEL</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="bannermethode">
+            <h2 class="mamethode">
+                <p>Ma Méthode d'accompagnement</p>                
+            </h2>
+            <!-- Carousel Boostrap -->
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="1er rendez-vous"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Signature contrat de coaching"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Séances de coaching"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/images/rendezvous.jpg" class="d-block w-100 carouselimage"
+                            alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>1er rendez-vous</h5>
+                            <p>Prise de contact, Ecoute</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/coaching.jpg"
+                            class="d-block w-100 carouselimage" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Signature contrat coaching</h5>
+                            <p>Contrat coaching & objectifs validés</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/suivi.jpg" class="d-block w-100 carouselimage" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Séances de coaching</h5>
+                            <p>Ecoute, Conseil</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="bannerrdv">
+            <div class="topright">
+                <span>Profitez de 30 minutes de fraîcheur</span>
+                <span><a id="buttonrdv" href="#"><strong>J'EN PROFITE</strong></a></span>
+            </div>
+        </section>
+    </main>
+    <button class="scroll-top"><i class="fa-solid fa-arrow-up"></i>top</button>
+    <!-- Pied de page -->
+    <footer>        
+        <h2>Contactez-Nous : </h2>
+        <a href="https://www.decathlon.fr/" target="_blank">
+            <i class="fa-brands fa-facebook"></i></a>
+        <a href="mailto:myshop@gmail.com">myshop@gmail.com</a>
+        <a href="tel:123456789">123456789</a>
+        <a href="" download>Mentions légales</a>
+    </footer>
+    <!-- Lien JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Lien vers fichier JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
