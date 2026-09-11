@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- To ensure proper rendering and touch zooming,  
+The width=device-width part sets the width of the page to follow the screen-width of the device
+(which will vary depending on the device).
+The initial-scale=1 part sets the initial zoom level when the page is first loaded by the browser.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <meta name="description" content="Coach professionnelle qui accompagne une personne en recherche d'emploi">
+    <meta name="keywords" content="coach professionnelle, accompagnement, recherche emploi">
+    <title>Em' Coaching Pro - Accueil</title>
+    <!-- Lien Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- Lien vers fichier CSS -->
+    <link rel="stylesheet" href="../assets/css/style2.css">
+
+    <!-- Lien FontAwsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!--<a class="navbar-brand" href="#">Navbar</a>-->
+                <a class="navbar-brand" id="mark-text" href="#">
+                    <i class="bi-star-fill icon-navbar" id="star"></i>
+                    Em' Coaching Pro
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll gap-3"
+                        style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link mark-text" aria-current="page" href="../index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mark-text" aria-current="page" href="apropos.html">A propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mark-text" aria-current="page" href="services.html">
+                              Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mark-text" aria-current="page" href="temoignages.html">
+                                Témoignages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mark-text" href="contact.html">
+                                Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mark-text btn btn-warning" href="connexion.html" role="button">Mon compte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  mark-text btn btn-info" href="inscription.html"><span>S'inscrire</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!--Début Ma Méthode -->
+        <section id="seance-gratuite" class="section">
+            <h1>1ère séance gratuite</h1>
+            <p>Prise de contact</p>
+            <p>Présentation de ma méthode</p>
+            <p>ecoute active de vos besoins</p>
+        </section>
+        <section id="contrat-coaching" class="section">
+            <h1>Validation des objectifs</h1>
+            <p>Signature du contrat d'accomapgnement</p>
+            <p>planification de la 3ème séance de coaching</p>
+        </section>
+        <section id="seances-coaching" class="section">
+            <h1>Séances de coaching</h1>
+            <p>Déroulement d'une séance de coaching</p>
+            <p>Planification de la séance de caoching suivante si nécessaire</p>
+        </section>
+        <section id="bilan-coaching" class="section">
+            <h1>Bilan de l'accompagnement</h1>
+            <p>Rapport de coaching</p>
+            <p>Validation des objectifs atteints</p>
+            <p>Recueil de votre témoignage</p>
+            <p>Signature du bilan du coaching</p>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="text-center section-title">
+                <h2 class="fw-bold">Contact</h2>
+                <p>Ecrivez moi, je vous répondrai dans un délai de 24 heures</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-7">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label"><strong>Et recevez directement dans votre
+                                    boîte mail des infos utiles
+                                    sur votre accompagnement personnalisé</strong></label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <p>Je ne partagerai jamais votre email avec une autre
+                                personne.</p>
+                        </div>
+                        <!-- <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>-->
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">J’accepte que mes informations saisies
+                                dans ce formulaire soient utilisées
+                                par l’Adie. Mes données sont traitées conformément à la Politique vie privée. Je
+                                traite vos informations de manière
+                                responsable.</label>
+                        </div>
+                        <div class="mb-3">
+                            <textarea id="commentaire" name="commentaire" rows="5" cols="60"
+                                placeholder="Écrivez ici..." required></textarea><br>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Soumettre</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--Fin Mes Services-->
+
+    <!-- Pied de page -->
+    <footer class="mt-auto">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-4 mb-3">
+                    <h5>Sortir de votre zone de confort</h5>
+                    <p>N'hésitez pas à me contacter pour un échange en toute simplicité !</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Liens rapides</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-white">Accueil</a></li>
+                        <li><a href="apropos.html" class="text-decoration-none text-white">A propos</a></li>
+                        <li><a href="services.html" class="text-decoration-none text-white">Services</a></li>
+                        <li><a href="rendezvous.html" class="text-decoration-none text-white">Prendre
+                                rendez-vous</a>
+                        </li>
+                        <li><a href="inscription.html" class="text-decoration-none text-white">S'inscrire</a></li>
+                        <li><a href="connexion.html" class="text-decoration-none text-white">Se connecter</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Suivez moi</h5>
+                    <ul class="list-inline social-icons">
+                        <li class="list-inline-item"><a href="#" class="text-white"><i
+                                    class="fa-brands fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i
+                                    class="fa-brands fa-square-linkedin"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i
+                                    class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mb-4">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p><i class="fa-regular fa-copyright"></i> 2026 Votre société. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer 
+    <footer class="footer text-center mt-3 bg-dark">
+        <div class="container">
+            <p>Copyright <i class="fa-regular fa-copyright"></i> 2026. Tous droits réservés. <span
+                    class="text-danger">&hearts;</span>Réalisé
+                par Dominique</p>
+            <span id="dt"></span>
+        </div>
+    </footer>
+
+     small footer END 
+    <script>
+        setInterval(() => {
+            document.getElementById('dt').textContent = new Date().toLocaleString();
+        }, 1000)
+    </script> -->
+    <!-- Lien JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Lien vers fichier JavaScript -->
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

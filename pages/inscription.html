@@ -1,70 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
+    <!-- To ensure proper rendering and touch zooming,  
+The width=device-width part sets the width of the page to follow the screen-width of the device
+(which will vary depending on the device).
+The initial-scale=1 part sets the initial zoom level when the page is first loaded by the browser.-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <!-- SEO -->
+    <meta name="description" content="Coach professionnelle qui accompagne une personne en recherche d'emploi">
+    <meta name="keywords" content="coach professionnelle, accompagnement, recherche emploi">
+    <title>Em' Coaching Pro - Accueil</title>
+    <!-- Lien Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <!-- Lien vers fichier CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style2.css">
+
+    <!-- Lien FontAwsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
 <body>
-
-    <header>
-        <!-- =========================
-             MENU BURGER (BOOTSTRAP)
-             Navbar responsive     
-             - navbar-toggler : bouton hamburger
-             - data-bs-toggle="collapse" : ouvre/ferme le menu
-             - data-bs-target : cible le menu à afficher
-             - navbar-collapse : contenu qui se replie sur mobile
-        ========================= -->
-        <nav class="navbar navbar-expand-lg" aria-label="menu burger">
-            <div class="container-fluid">
+    <header class="hero" id="hero-services">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!--<a class="navbar-brand" href="#">Navbar</a>-->
+                <a class="navbar-brand" id="mark-text" href="#">
+                    <i class="bi-star-fill icon-navbar" id="star"></i>
+                    Em' Coaching Pro
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll gap-3"
+                        style="--bs-scroll-height: 100px;">
                         <li class="nav-item">
-                            <a id="logo"><i class="fa-regular fa-star" style="color: whitesmoke;"></i></a>
+                            <a class="nav-link" aria-current="page" href="../index.html">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a href="../index.html" class="textaccueil"> ACCUEIL</a>
+                            <a class="nav-link" aria-current="page" href="apropos.html">A propos</a>
                         </li>
                         <li class="nav-item">
-                            <a href="presentation.html" id="presentation">PRESENTATION</a>
+                            <a class="nav-link" aria-current="page" href="services.html">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a href="portfolio.html">PORTFOLIO</a>
+                            <a class="nav-link" aria-current="page" href="temoignages.html">
+                                Témoignages</a>
                         </li>
                         <li class="nav-item">
-                            <a href="contact.html">CONTACT</a>
+                            <a class="nav-link" href="#contact">
+                                Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a href="connexion.html" id="connexion">SE CONNECTER</a>
+                            <a class="nav-link btn btn-warning" href="connexion.html" role="button">Mon compte</a>
                         </li>
                         <li class="nav-item">
-                            <a href=""></a>
-                        </li>
-                        <li class="nav-item" id="fondbleu">
-                            <a id="iconrdv">
-                                <i class="fa-solid fa-calendar-days" style="color: whitesmoke;"></i></a>
-                            <a href="">1er RENDEZ-VOUS GRATUIT</a>
+                            <a class="nav-link btn btn-info   active" href="#"><span>S'inscrire</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <div class="container hero-content text-center text-white">       
+            <h1 class="display-4 fw-bold">Vous aider à <span class="text-client">Retrouver du Bien-Etre</span></h1>
+            <p class="lead text-white-50">Vous motiver à atteindre vos objectifs</p>
+            <a href="rendezvous.html" class="btn btn-primary btn-md">Prendre rendez-vous</a>
+        </div>
     </header>
-
     <main>
-            <form class="formulaire">
-                <h2>Inscription</h2>
+        <h2>Inscription</h2>
+            <form class="formulaire">           
 
                 <fieldset class="inscription-fieldset">
                     <legend>Informations Personnelles</legend>
@@ -87,18 +99,70 @@
                 <button type="submit">Enregistrer un utilisateur</button>             
 
             </form>
-    </main>
+    </main>   
 
-
-    <!-- Pied de page -->
-    <footer>
-        <h2>Contactez-Nous : </h2>
-        <a href="https://www.decathlon.fr/" target="_blank">Facebook</a>
-        <a href="mailto:myshop@gmail.com">myshop@gmail.com</a>
-        <a href="tel:123456789">123456789</a>
-        <a href="" download>Mentions légales</a>
+<!-- Pied de page -->
+    <footer class="mt-auto">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-4 mb-3">
+                    <h5>Sortir de votre zone de confort</h5>
+                    <p>N'hésitez pas à me contacter pour un échange en toute simplicité !</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Liens rapides</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-white">Accueil</a></li>
+                        <li><a href="pages/apropos.html" class="text-decoration-none text-white">A propos</a></li>
+                        <li><a href="pages/services.html" class="text-decoration-none text-white">Services</a></li>
+                        <li><a href="pages/rendezvous.html" class="text-decoration-none text-white">Prendre rendez-vous</a>
+                        </li>
+                        <li><a href="pages/inscription.html" class="text-decoration-none text-white">S'inscrire</a></li>
+                        <li><a href="pages/connexion.html" class="text-decoration-none text-white">Se connecter</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Suivez moi</h5>
+                    <ul class="list-inline social-icons">
+                        <li class="list-inline-item"><a href="#" class="text-white"><i
+                                    class="fa-brands fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i
+                                    class="fa-brands fa-square-linkedin"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i
+                                    class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mb-4">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p><i class="fa-regular fa-copyright"></i> 2026 Votre société. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <!-- Footer 
+    <footer class="footer text-center mt-3 bg-dark">
+        <div class="container">
+            <p>Copyright <i class="fa-regular fa-copyright"></i> 2026. Tous droits réservés. <span
+                    class="text-danger">&hearts;</span>Réalisé
+                par Dominique</p>
+            <span id="dt"></span>
+        </div>
+    </footer>
+
+     small footer END 
+    <script>
+        setInterval(() => {
+            document.getElementById('dt').textContent = new Date().toLocaleString();
+        }, 1000)
+    </script> -->
+    <!-- Lien JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Lien vers fichier JavaScript -->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
