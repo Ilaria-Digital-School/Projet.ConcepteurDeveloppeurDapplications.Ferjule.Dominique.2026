@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- To ensure proper rendering and touch zooming,  
+The width=device-width part sets the width of the page to follow the screen-width of the device
+(which will vary depending on the device).
+The initial-scale=1 part sets the initial zoom level when the page is first loaded by the browser.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <meta name="description" content="Coach professionnelle qui accompagne une personne en recherche d'emploi">
+    <meta name="keywords" content="coach professionnelle, accompagnement, recherche emploi">
+    <title>Em' Coaching Pro - Accueil</title>
+    <!-- Lien Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- Lien vers fichier CSS -->
+    <link rel="stylesheet" href="../assets/css/style2.css">
+
+    <!-- Lien FontAwsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <header class="hero" id="hero-services">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!--<a class="navbar-brand" href="#">Navbar</a>-->
+                <a class="navbar-brand" id="mark-text" href="#">
+                    <i class="bi-star-fill icon-navbar" id="star"></i>
+                    Em' Coaching Pro
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll gap-3"
+                        style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="apropos.html">A propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="temoignages.html">
+                                Témoignages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                               <i class="bi bi-pen icon-navbar"></i> Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-warning" href="connexion.html" role="button">Mon compte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-info" href="inscription.html"><span>S'inscrire</span></a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">Recherche</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="container hero-content text-center text-white">
+            <span class="text-uppercase text-primary fw-bold" id="hero-titre">Satisfaction client</span>
+            <h1 class="display-4 fw-bold">Vous aider à <span class="text-client">Retrouver du Bien-Etre</span></h1>
+            <p class="lead text-white-50">Vous motiver à atteindre vos objectifs</p>
+            <a href="rendezvous.html" class="btn btn-primary btn-md">Prendre rendez-vous</a>
+        </div>
+    </header>
+
+    <main>
+            <form class="formulaire">
+                <h2>Contactez-Nous</h2>
+
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" placeholder="Votre nom" required> <br>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" placeholder="exemple@gmail.com" required> <br>
+
+                <label for="msg">Message :</label>
+                <textarea rows="2" id="msg" placeholder="Votre message" required></textarea> <br>
+
+                <button type="submit" id="btndetails">Envoyer</button>
+            </form>
+    </main>
+
+
+</body>
+
+</html>
