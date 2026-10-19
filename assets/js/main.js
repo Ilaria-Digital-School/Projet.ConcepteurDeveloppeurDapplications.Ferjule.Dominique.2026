@@ -1,21 +1,34 @@
 
-/*document.querySelector(".scroll-top").addEventListener("click", function () {
+document.querySelector(".scroll-top").addEventListener("click", function () {
     window.scrollTo({
         top: 0
     })
-})*/
+})
 
-const panels = document.querySelectorAll('.panel');
+// Sélection du bouton
+/*const bouton = document.getElementById("monBouton");
 
-panels.forEach(function(panel) {
-  panel.addEventListener('click', function() {
-    removeActiveClasses();
-    panel.classList.add('active');
-  });
-});
+// Fonction pour l'affichage
+function afficherMessage() {
+    console.log("Le bouton a été cliqué depuis main.js !");
+}*/
 
-function removeActiveClasses() {
-  panels.forEach(function(panel) {
-    panel.classList.remove('active');
-  });
-}
+// Écoute de l'événement
+//bouton.addEventListener("click", afficherMessage);
+//
+//const panels = document.querySelectorAll('.panel');
+
+//panels.forEach(function(panel) {
+//  panel.addEventListener('click', function() {
+ //   removeActiveClasses();
+//    panel.classList.add('active');
+//  });
+//});
+
+//function removeActiveClasses() {
+//  panels.forEach(function(panel) {
+//    panel.classList.remove('active');
+//  });
+//}//
+
+

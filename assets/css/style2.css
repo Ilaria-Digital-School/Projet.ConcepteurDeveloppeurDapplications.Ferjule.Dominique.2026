@@ -1,40 +1,49 @@
 body {
     font-family: Cookie;
-    font-size: 20px;
     font-style: normal;
     font-variant: normal;
-    font-weight: 600;
     /*'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
     /* "Open Sans", "Helvetica", "Arial", "Sans-Serif";*/
     /*color: #212529;*/
     /*line-height: 1.625;*/
 }
-.mark-text {
-    color: white;
-}
+
 #logo {
-    width: 90px;
-    height: 84px;
+    width: 100px;
+    height: 94px;
     opacity: 1;
 }
-.color-titrelogo {  
+
+.color-titrelogo {
     color: #d943a4;
 }
+
+#nomSociete {
+    font-size: 20px;
+}
+
 header {
     overflow: hidden;
-    /*position: sticky;*/
     top: 0;
     padding: 10px 16px;
-    z-index: 1000;
     /*background: linear-gradient(#5a3debf7, #06f426);*/
     background-color: black;
     mask-image:
         radial-gradient(ellipse at top, #e66465, transparent),
         radial-gradient(ellipse at bottom, #4d9f0c, transparent);
 }
+
+.containerheader {
+    min-height: 23vh;
+    background-color: black;
+    mask-image:
+        radial-gradient(ellipse at top, #e66465, transparent),
+        radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+}
+
 .hero-accueil {
     position: relative;
-    display: flex; 
+    display: flex;
     flex-direction: column;
     /*width: 100%;*/
     /* Full width of the container */
@@ -45,16 +54,15 @@ header {
     mask-image:
         radial-gradient(ellipse at top, #e66465, transparent),
         radial-gradient(ellipse at bottom, #4d9f0c, transparent);
-    filter: contrast(130%);
-    /* font-family: 'Poppins', sans-serif;*/
-    /*background-size: 43vmax;*/
+    filter: contrast(100%);
+    background-size: 73vmax;
     /* Ensures image covers the container fully */
     /*the entire element is always covered*/
     background-position: center;
     /* Centers the image */
     background-repeat: no-repeat;
     text-align: center;
-    padding-top: 12vh;
+    padding-top: 8vh;
 }
 
 .hero-accueil::before {
@@ -69,21 +77,6 @@ header {
     pointer-events: none;
 }
 
-.hero-accueil {
-    flex: 1;
-    /* forcer l'élément à occuper tout l'espace disponible*/
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;
-}
-
-#titre-site {
-    position: absolute;
-    top: 12%;
-    left: 30%;
-}
-
 #titre-site:hover {
     filter: brightness(1.2);
     scale: 1.1;
@@ -93,7 +86,7 @@ header {
     position: absolute;
     top: 380px;
     left: 65%;
-    flex: 1;
+    /*flex: 1;*/
     /* forcer l'élément à occuper tout l'espace disponible*/
     display: flex;
     flex-direction: column;
@@ -137,7 +130,7 @@ header {
     height: 110vh;
     /* Use viewport height for responsiveness */
     /* background-image: url(/assets/images/bckgrdcoach.png);    */
-    background-image: url(/assets/images/pexels-codioful-7135113.jpg);
+    /*background-image: url(/assets/images/pexels-codioful-7135113.jpg);*/
     mask-image:
         radial-gradient(ellipse at top, #e66465, transparent),
         radial-gradient(ellipse at bottom, #4d9f0c, transparent);
@@ -182,12 +175,12 @@ h1 {
     line-height: 1.2;
 }
 
-img:hover {
-    /*  filter: grayscale(100%); */
+/*img:hover {
+    /*  filter: grayscale(100%); 
     filter: brightness(1.2);
     scale: 1.1;
-    /* L'effet se produit sur 0.5 seconde */
-}
+    /* L'effet se produit sur 0.5 seconde 
+}*/
 
 #hero-temoignages {
     background-image: url(/assets/images/groupe-temoignages.jpg);
@@ -198,7 +191,7 @@ img:hover {
 }
 
 .section {
-    padding: 5rem 0;
+    padding: 8rem 0;
 }
 
 .section-title {
@@ -277,8 +270,32 @@ footer {
     /*background:linear-gradient(to right, rgba(47, 101, 129, 0.837), transparent);*/
     /*color:#d943a4;*/
     font-weight: 600;
-    margin-top: 50px;
+    margin-top: 100px;
 }
+
+.carousel-item {
+    height: 550px;
+}
+
+/* Hauteur pour les tablettes (768px et plus) */
+@media (min-width: 768px) {
+  .carousel-item {
+    height: 450px;
+  }
+}
+
+/* Hauteur pour les écrans d'ordinateurs (992px et plus) */
+@media (min-width: 992px) {
+  .carousel-item {
+    height: 600px;
+  }
+}
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
 .card-title {
     font-size: 1.25rem;
     margin-top: 30px;
@@ -288,7 +305,10 @@ footer {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-
+.card-img{
+   border-radius: 0%;
+   padding: 5px 5px;
+  }
 #img-card {
     height: 250px;
 }
@@ -401,7 +421,8 @@ footer {
     flex: 1;
     width: 5%;
     position: relative;
-    height: 70vh;/* 70% de la hauteur visible de l'écran*/
+    height: 70vh;
+    /* 70% de la hauteur visible de l'écran*/
     margin: 0 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -410,7 +431,7 @@ footer {
 }
 
 .panel.active {
-    flex: 1.5;
+    flex: 1;
     opacity: 1;
     padding: 25px;
 }
@@ -431,9 +452,10 @@ footer {
     aspect-ratio: 16 / 10;
     overflow: hidden;
 }
+
 /*  Background images section Méthode */
 .panel:nth-child(1) {
-    background: url(/assets/images/pexels-kindelmedia-7054507.jpg   );
+    background: url(/assets/images/pexels-kindelmedia-7054507.jpg);
     background-size: cover;
     background-position: center;
     filter: contrast(100%);
@@ -460,25 +482,28 @@ footer {
 }
 
 .panel:nth-child(4) {
-    background: url(/assets/images/pexels-seymasungr-1499342462-27682045.jpg    );
+    background: url(/assets/images/pexels-seymasungr-1499342462-27682045.jpg);
     background-size: cover;
     background-position: center;
     filter: contrast(100%);
     background-repeat: no-repeat;
     object-fit: contain;
 }
+
 @media screen and (min-width: 1100px) {
     .panel h3 {
         font-size: 30px;
     }
 }
+
 #titre-site {
     font-family: Cookie;
-    font-size: 20px;
+    font-size: 80px;
     font-style: normal;
     font-variant: normal;
     font-weight: 600;
 }
+
 /* page A propos*/
 #div1 {
     position: relative;
@@ -621,7 +646,8 @@ footer {
     margin: 0 5px;
     /* Space between menu items */
     position: relative;
-
+    font-size: 20px;
+    color: white;
 }
 
 .nav-link:hover {
@@ -631,6 +657,7 @@ footer {
 
 .nav-link.active {
     color: #007bff !important;
+    font-size: 20px;
     /* Override default active color */
 }
 
@@ -650,6 +677,14 @@ footer {
 .nav-link.active::after {
     width: 80%;
     left: 10%;
+}
+
+.menu {
+    max-height: max-content;
+}
+
+.menu-item {
+    font-size: 15px;
 }
 
 /* Section Statistiques */
@@ -676,7 +711,7 @@ footer {
     display: block;
 }
 
-/* Section de droite avec la couleur jaune fluo */
+/* Section de droite */
 .content-section {
     flex: 1.1;
     /* Légèrement plus large que la colonne de gauche */
@@ -689,11 +724,9 @@ footer {
     justify-content: center;
     padding: 4rem;
     margin-top: 10%;
-
 }
 
 .content-wrapper {
-    max-width: 700px;
     width: 100%;
 }
 
@@ -711,7 +744,6 @@ h1 {
 .description {
     font-size: 1.8rem;
     line-height: 1.6;
-    margin-bottom: 3.5rem;
     color: #1a1a1a;
 }
 
@@ -720,6 +752,7 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 1.8rem;
+    margin-top: 20%;
 }
 
 .skill-item {
@@ -744,8 +777,8 @@ h1 {
 
 .progress {
     height: 100%;
-    background-color: #000000;
-    /* Ligne noire pleine */
+    background-color: #d943a4;
+    /* Ligne pleine */
 }
 
 #fond-stats {
@@ -758,10 +791,6 @@ h1 {
     .container {
         flex-direction: column;
     }
-
-    /*.image-section {
-        height: 45vh;
-    }*/
 
     .content-section {
         padding: 2.5rem 1.5rem;
@@ -785,12 +814,11 @@ h1 {
 
 }
 
-/* bandeau mots*/
+/* bandeau des valeurs */
 .banner-section {
     background-color: #0000D1;
     /* Bleu vif similaire à l'image */
-    overflow: hidden;
-    padding: 20px 0;
+    overflow: hidden;   
     width: 100%;
 }
 
@@ -809,7 +837,7 @@ h1 {
     font-family: 'Arial', sans-serif;
     /* Vous pouvez remplacer par une police plus géométrique comme Montserrat ou Poppins */
     font-weight: bold;
-    font-size: 24px;
+    font-size: 44px;
     white-space: nowrap;
 
     /* Optionnel : Ajoute une animation de défilement de droite à gauche */
@@ -817,11 +845,12 @@ h1 {
 }
 
 /* Style de l'astérisque / séparateur vert fluo */
-.banner-content .separator {
+.separator {
     color: #CCFF00;
     /* Vert/jaune fluo */
-    font-size: 32px;
-    line-height: 1;
+    font-size: 160px;
+    line-height: 1;   
+ 
 }
 
 /* Animation de défilement infini (Optionnel) */
@@ -846,14 +875,14 @@ h1 {
 }
 
 /* Style des cartes personnalisées */
-.card {
+/*.card {
     background-color: #f7f7f7;
     border: none;
     border-radius: 0px;    
     box-shadow: none;
     cursor: pointer;
     text-align: left;
-}
+}*/
 
 /* --- EFFET DE SURVOL SUR LA CARTE --- */
 .card:hover {
@@ -867,7 +896,7 @@ h1 {
     font-weight: 700;
     font-size: 1.75rem;
     margin-bottom: 0.75rem;
-    margin-top: 90px;
+    margin-top: 20px;
 }
 
 .card-text {
@@ -875,7 +904,7 @@ h1 {
     font-size: 1.5rem;
     font-weight: 400;
     opacity: 0.9;
-   
+
 }
 
 /* Bouton en savoir plus */
@@ -889,7 +918,7 @@ h1 {
     display: inline-flex;
     align-items: center;
     border-bottom: 2px solid #000000;
-    padding-top: 20px;   
+    padding-top: 20px;
     margin-bottom: 20px;
     width: fit-content;
 }
@@ -897,7 +926,8 @@ h1 {
 /* Survol déclenché au survol de toute la carte*/
 .card:hover,
 .view-details-btn:hover svg {
-    transform: translate(3px, -3px);/* La flèche se déplace vers le haut/droite */
+    transform: translate(3px, -3px);
+    /* La flèche se déplace vers le haut/droite */
 }
 
 /* position et taille de la flèche*/
@@ -914,12 +944,12 @@ h1 {
         } 
 /* Section Rejoignez moi */
 .hero-section {
-/*background-color: #d4ff00;*/
-    min-height: 120vh;
+    /*background-color: #d4ff00;*/
+    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 20px;
+    padding: 20px 20px;
     font-family: 'Inter', sans-serif;
     box-sizing: border-box;
 }
@@ -974,4 +1004,42 @@ h1 {
     .hero-subtitle {
         font-size: 1rem;
     }
+}
+
+/* Style du bouton retour en haut */
+#monBouton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+#monBouton:hover {
+    background-color: #0000D1;
+    transform: scale(1.1);
+
+}
+
+/* section Apport */
+.card {
+    border-radius: 0px;
+}
+
+.card-header {
+    border-bottom: none;
+}
+
+.card-footer {
+    border-top: none;
 }
