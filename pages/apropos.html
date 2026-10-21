@@ -10,161 +10,116 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO -->
     <meta name="description" content="Coach professionnelle qui accompagne une personne en recherche d'emploi">
-    <meta name="keywords" content="coach professionnelle, accompagnement, recherche emploi">
-    <title>Em' Coaching Pro - Accueil</title>
+    <meta name="keywords"
+        content="coach professionnelle, accompagnement, recherche emploi, personnel, collectif, soutien">
+    <title>Ac' Coaching Pro - Accueil</title>
     <!-- Lien Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <!-- Lien vers fichier CSS -->
-    <link rel="stylesheet" href="../assets/css/style2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
 
+
+    <!-- Lien vers fichier CSS -->
+    <link rel="stylesheet" href="/assets/css/style2.css">
     <!-- Lien FontAwsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
 <body>
-    <header class="hero" id="hero-apropos">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <!--<a class="navbar-brand" href="#">Navbar</a>-->
-                <a class="navbar-brand" id="mark-text" href="#">
-                    <i class="bi-star-fill icon-navbar" id="star"></i>
-                    Em' Coaching Pro
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll gap-3"
-                        style="--bs-scroll-height: 100px;">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../index.html">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link  active" aria-current="page" href="#">
-                                <i class="bi-chat-dots icon-navbar"></i> A propos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="services.html">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="temoignages.html">
-                                Témoignages</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">
-                                Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-warning" href="connexion.html" role="button">Mon compte</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-info" href="inscription.html"><span>S'inscrire</span></a>
-                        </li>
-                    </ul>
+    <header>
+        <div class="containerheader">
+            <nav class="navbar md:navbar-expand bg-1" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="/assets/images/icone logo em coach.png" alt="Logo entreprise"
+                            class="d-inline-block align-text-top" id="logo">
+                    </a>
+                    <a class="navbar-brand color-titrelogo" href="#" id="nomSociete">
+                        Ac' Coaching Pro
+                    </a>
+                    <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer"
+                        data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+                    </button>
+                    <dialog class="drawer drawer-end" tabindex="-1" id="navbarDrawer"
+                        aria-labelledby="navbarDrawerLabel">
+                        <div class="drawer-header">
+                            <h5 class="drawer-title" id="navbarDrawerLabel">Menu</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="drawer"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="drawer-body mb-2 md:mb-0">
+                            <ul class="nav navbar-nav me-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/index.html">Accueil</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link  active" aria-current="page" href="#">A propos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pages/temoignages.html">Témoignages</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/pages/rendezvous.html">Prendre rendez-vous</a>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav me-auto">
+                                <li class="nav-item">
+                                    <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
+                                        Accès
+                                    </button>
+                                    <div class="menu">
+                                        <a class="menu-item" href="/pages/connexion.html">Mon compte</a>
+                                        <hr class="menu-divider">
+                                        <a class="menu-item" href="/pages/inscription.html">S'inscrire</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </dialog>
                 </div>
-            </div>
-        </nav>
-        <div class="container hero-content text-center text-white">
-            <h1 class="display-4 fw-bold">Contente de <span class="text-client">Vous Rencontrer</span></h1>
-            <p>Vous êtes unique & spécifique</p>
-            <a href="rendezvous.html" class="btn btn-primary btn-md">Prendre rendez-vous</a>
+            </nav>
         </div>
     </header>
     <main>
         <section id="apropos" class="section">
             <!--Début A propos-->
             <div class="container">
-                <h1>
-                    a propos
-                </h1>
+                <h1>A Propos</h1>
                 <div id="div1">
-                    <div id="div2">je m'appelle...
-                        <div id="div3">class="img-apropos">
-                            <img src="/assets/images/coach.jpg" alt="Photo client">
+                    <div id="div2">
+                    <h2> je m'appelle...</h2>
+                        <div id="div3" class="img-apropos">
+                            <img src="/assets/images/coaching.jpg" alt="Photo client">
                         </div>
                     </div>
                 </div>
-
-        </section>
-        <section id="contact" class="section">
-            <div class="text-center section-title">
-                <h2 class="fw-bold">Contact</h2>
-                <p>Ecrivez moi, je vous répondrai dans un délai de 24 heures</p>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-7">
-                    <form>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label"><strong>Et recevez directement dans votre
-                                    boîte mail des infos utiles
-                                    sur votre accompagnement personnalisé</strong></label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                            <p>Je ne partagerai jamais votre email avec une autre
-                                personne.</p>
-                        </div>
-                        <!-- <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
-                        </div>-->
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">J’accepte que mes informations saisies
-                                dans ce formulaire soient utilisées
-                                par l’Adie. Mes données sont traitées conformément à la Politique vie privée. Je
-                                traite vos informations de manière
-                                responsable.</label>
-                        </div>
-                        <div class="mb-3">
-                            <textarea id="commentaire" name="commentaire" rows="5" cols="60"
-                                placeholder="Écrivez ici..." required></textarea><br>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Soumettre</button>
-                    </form>
                 </div>
-            </div>
-        </section>
+        </section>  
+        <section id="fond-stats" class="section">
+            <section class="container2">
+                <!-- Section Gauche : Image -->
+                <section class="image-section">
+                    <img src="/assets/images/IMG_20260113_225747.jpg" alt="personnage">
+                </section>
+                <!-- Section Droite : Contenu -->
+                <section class="content-section">
+                    <div class="content-wrapper">
+                        <h1 class="color-titrelogo">Coach professionnelle</h1>
+                        <!-- Section des compétences / statistiques -->
+                     </section>
+            </section>      
     </main>
     <!--Fin A propos-->
-    <div class="container py-4" menu.html>
-        <div class="newsletter">
-            <h2>Souscrivez à ma Newsletter</h2>
-            <p>Restez informé(e) de mes dernières nouvelles et mises à jour</p>
-            <form>
-                <div class="col-4 form-group">
-                    <input type="email" class="form-control" placeholder="Adresse email" required>
-                </div>
-                <br>
-                <button type="submit" class="btn btn-outline-success">Souscrivez</button>
-            </form>
-        </div>
-    </div>
+    
     <!-- Pied de page -->
     <footer class="mt-auto">
         <div class="container">
             <div class="row ">
                 <div class="col-md-4 mb-3">
-                    <h5>Sortir de votre zone de confort</h5>
-                    <p>N'hésitez pas à me contacter pour un échange en toute simplicité !</p>
+                    <h2>Sortez de votre zone de confort</h2>                    
                 </div>
-                <div class="col-md-4 mb-3">
-                    <h5>Liens rapides</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-decoration-none text-white">Accueil</a></li>
-                        <li><a href="pages/apropos.html" class="text-decoration-none text-white">A propos</a></li>
-                        <li><a href="pages/services.html" class="text-decoration-none text-white">Services</a></li>
-                        <li><a href="pages/rendezvous.html" class="text-decoration-none text-white">Prendre
-                                rendez-vous</a>
-                        </li>
-                        <li><a href="pages/inscription.html" class="text-decoration-none text-white">S'inscrire</a></li>
-                        <li><a href="pages/connexion.html" class="text-decoration-none text-white">Se connecter</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-3">
+                 <div class="col-md-4 mb-3">
                     <h5>Suivez moi</h5>
                     <ul class="list-inline social-icons">
                         <li class="list-inline-item"><a href="#" class="text-white"><i
@@ -177,32 +132,13 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                 </div>
             </div>
             <hr class="mb-4">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <p><i class="fa-regular fa-copyright"></i> 2026 Votre société. Tous droits réservés.</p>
-                </div>
             </div>
-        </div>
-    </footer>
-
-    <!-- Footer 
-    <footer class="footer text-center mt-3 bg-dark">
-        <div class="container">
-            <p>Copyright <i class="fa-regular fa-copyright"></i> 2026. Tous droits réservés. <span
-                    class="text-danger">&hearts;</span>Réalisé
-                par Dominique</p>
-            <span id="dt"></span>
-        </div>
-    </footer>
-
-     small footer END 
-    <script>
-        setInterval(() => {
-            document.getElementById('dt').textContent = new Date().toLocaleString();
-        }, 1000)
-    </script> -->
+    </footer>    
     <!-- Lien JS Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
+        crossorigin="anonymous"></script>
+    <script src="/assets/js/main.js"></script>
 </body>
 
 </html>
