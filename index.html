@@ -16,8 +16,8 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
     <!-- Lien Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
-
-
+    <!-- Lien CSS Bootstrap 6 CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Lien vers fichier CSS -->
     <link rel="stylesheet" href="assets/css/style2.css">
     <!-- Lien FontAwsome -->
@@ -30,7 +30,7 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
             <nav class="navbar md:navbar-expand bg-1" data-bs-theme="dark">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
-                        <img src="/assets/images/icone logo em coach.png" alt="Logo entreprise"
+                        <img src="/assets/images/logoemcoach.png" alt="Logo entreprise"
                             class="d-inline-block align-text-top" id="logo">
                     </a>
                     <a class="navbar-brand color-titrelogo" href="#" id="nomSociete">
@@ -113,88 +113,36 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                 </div>
             </div>
         </section>
+
         <section class="section">
             <div class="container my-5 py-5">
-                <!-- Section Titre -->
                 <div class="row text-center mb-5">
                     <div>
                         <h1 class="display-4 fw-bold color-titrelogo">Ce Que Je Vous Apporte</h1>
                     </div>
                 </div>
-                <!-- Section Apport -->
-                <div class="row row-cols-1 md:row-cols-2 g-6">
-                    <div class="col">
-                        <div class="card h-100">
-                            <div class="card-header">
-                                <i class="fa-solid fa-hand-holding-heart fa-4x"></i>
-                            </div>
-                            <div class="card-body">
-                                <h2 class="card-title text-center">Soutien jeunes adultes & adolescents</h2>
-                                <div class="d-grid gap-2 md:d-flex md:justify-content-center">
-                                    <button type="button" class="btn-solid theme-primary btn-xs">En savoir plus
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <small class="fg-4 fw-bolder">Retrouver confiance en vous</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <div class="card-header">
-                                <i class="fa-solid fa-child-reaching fa-4x"></i>
-                            </div>
-                            <div class="card-body">
-                                <h2 class="card-title text-center">Développement personnel</h2>
-                                <div class="d-grid gap-2 md:d-flex md:justify-content-center">
-                                    <button type="button" class="btn-solid theme-primary btn-xs">En savoir plus
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <small class="fg-4 fw-bolder">Vous épanouir</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <div class="card-header">
-                                <i class="fa-solid fa-users-line fa-4x"></i>
-                            </div>
-                            <div class="card-body">
-                                <h2 class="card-title text-center">Développement collectif</h2>
-                                <div class="d-grid gap-2 md:d-flex md:justify-content-center">
-                                    <button type="button" class="btn-solid theme-primary btn-xs">En savoir plus
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <small class="fg-4 fw-bolder">Un objectif commun</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <div class="card-header">
-                                <i class="fa-solid fa-feather fa-4x"></i>
-                            </div>
-                            <div class="card-body">
-                                <h2 class="card-title text-center">Soutien à la parentalité</h2>
-                                <div class="d-grid gap-2 md:d-flex md:justify-content-center">
-                                    <button type="button" class="btn-solid theme-primary btn-xs">En savoir plus
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <small class="fg-4 fw-bolder">Soutenir les parents</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </section>    
-        <section id="fond-stats" class="section">
-            <section class="container2">
+                <!-- Grille responsive Bootstrap 6 -->
+                <div class="row row-cols-1 md:row-cols-2 g-6" id="cards-container"></div>
+            </div>
+        </section>
+
+        <!-- Modale v6 utilisant la balise native <dialog> -->
+        <dialog class="dialog dialog-lg" id="serviceModal">
+            <div class="dialog-header">
+                <h5 class="dialog-title fw-bold" id="serviceModalLabel">Titre du Service</h5>
+                <!-- Fermeture native v6 sans JS -->
+                <button type="button" class="btn-close" commandfor="serviceModal" command="close"
+                    aria-label="Close"></button>
+            </div>
+            <div class="dialog-body text-secondary" id="serviceModalBody" style="white-space: pre-line;"></div>
+            <div class="dialog-footer">
+                <button type="button" class="btn btn-secondary" commandfor="serviceModal"
+                    command="close">Fermer</button>
+            </div>
+        </dialog>
+
+        <section class="section fond-stats">
+            <div class="container2">
                 <!-- Section Gauche : Image -->
                 <section class="image-section">
                     <img src="./assets/images/pexels-juliasakelli-19281786.jpg" alt="personnage">
@@ -246,41 +194,126 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                         </div>
                     </div>
                 </section>
-            </section>
+            </div>
         </section>
         <section class="section">
-           <h1 class="color-titrelogo text-center">Ma Méthode d'Accompagnement en 4 étapes</h1>
-           <div id="carouselExampleInterval" class="carousel slide" data-bs-autoplay="true">
-  <div class="carousel-inner rounded-5">
-    <div class="carousel-item active" data-bs-interval="3000">
-      <img src="/assets/images/pexels-polina-zimmerman-3958461.jpg" class="d-block img-fluid" alt="...">
-    </div>
-    <div class="carousel-item" data-bs-interval="3000">
-      <img src="/assets/images/pexels-seymasungr-1499342462-27872185.jpg" class="d-block img-fluid" alt="...">
-    </div>
-    <div class="carousel-item" data-bs-interval="3000">
-      <img src="/assets/images/developprof.jpg" class="d-block img-fluid" alt="...">
-    </div>
-    <div class="carousel-item" data-bs-interval="3000">
-      <img src="/assets/images/coaching.jpg" class="d-block img-fluid" alt="...">
-    </div>
-  </div>
-  <div class="d-flex justify-content-between align-items-center mt-3">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <h1 class="color-titrelogo text-center">Ma Méthode d'Accompagnement en 4 étapes</h1>
+            <div id="carouselEndsWrap" class="carousel slide" data-bs-ends="wrap">
+                <div class="d-flex justify-content-between align-items-center">
+                    <ol class="stepper stepper-horizontal w-100">
+                        <li class="stepper-item active theme-accent">30 minutes pour clarifier et diagnostiquer</li>
+                        <li class="stepper-item">Co-construction du Contrat</li>
+                        <li class="stepper-item active theme-success">Séances de Coaching</li>
+                        <li class="stepper-item active theme-danger">Bilan & Autonomie</li>
+                    </ol>
+                </div>
+                <div id="carouselBootstrap6" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <!-- Indicateurs -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselBootstrap6" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselBootstrap6" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselBootstrap6" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselBootstrap6" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                    </div>
 
-    </div>
-    <button class="btn-icon btn-sm carousel-control-play-pause" type="button" data-bs-target="#carouselExampleInterval" aria-label="Pause" data-bs-pause-label="Pause" data-bs-play-label="Play">
-      <span class="carousel-icon-pause" aria-hidden="true"></span>
-      <span class="carousel-icon-play" aria-hidden="true"></span>
-    </button>
-  </div>
-</div>
+                    <div class="carousel-inner">
+                        <!-- Item 1 (Actif) -->
+                        <div class="carousel-item active">
+                            <div class="card border-0 bg-transparent">
+                                <!-- Changement : d-flex pour forcer l'alignement horizontal sans conflit -->
+                                <div class="d-flex flex-column flex-md-row bg-light rounded overflow-hidden"
+                                    style="min-height: 350px;">
+                                    <!-- Partie Gauche : L'image -->
+                                    <div class="w-100 w-md-50 position-relative" style="min-height: 250px;">
+                                        <img src="/assets/images/pexels-polina-zimmerman-3958461.jpg"
+                                            class="img-fluid w-100 object-fit-cover responsive-carousel-img rounded"
+                                            alt="...">
+                                    </div>
+                                    <!-- Partie Droite : Le texte à l'extérieur -->
+                                    <div class="w-100 w-md-50 d-flex align-items-center">
+                                        <div class="card-body p-4 p-md-5">
+                                            <h5 class="card-title fw-bold fs-4 fs-md-2 text-dark">30 minutes pour faire
+                                                le point</h5>
+                                            <p class="card-text text-muted">1er entretien gratuit</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="carousel-item">
+                            <div class="card border-0 bg-transparent">
+                                <div class="row g-0 align-items-center">
+                                    <!-- Partie Gauche : L'image -->
+                                    <div class="col-12 col-md-6">
+                                        <img src="/assets/images/pexels-maksgelatin-5430243.jpg"
+                                            class="img-fluid w-100 object-fit-cover responsive-carousel-img rounded"
+                                            alt="...">
+                                    </div>
+                                    <!-- Partie Droite : Le texte à l'extérieur -->
+                                    <div class="col-12 col-md-6">
+                                        <div class="card-body p-4 p-md-5">
+                                            <h5 class="card-title fw-bold fs-4 fs-md-2 text-dark">Signature du Contrat
+                                                de Coaching</h5>
+                                            <p class="card-text">Définissons une stratégie sur-mesure</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="carousel-item">
+                            <div class="card border-0 bg-transparent">
+                                <div class="row g-0 align-items-center">
+                                    <!-- Partie Gauche : L'image -->
+                                    <div class="col-12 col-md-6">
+                                        <img src="/assets/images/pexels-yunus-kilic-55235055-30858977.jpg"
+                                            class="img-fluid w-100 object-fit-cover responsive-carousel-img rounded"
+                                            alt="...">
+                                    </div>
+                                    <!-- Partie Droite : Le texte à l'extérieur -->
+                                    <div class="col-12 col-md-6">
+                                        <div class="card-body p-4 p-md-5">
+                                            <h5 class="card-title fw-bold fs-4 fs-md-2 text-dark">Séances de coaching
+                                            </h5>
+                                            <p class="card-text">Atteignez vos objectifs avec mon aide</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="carousel-item">
+                            <div class="card border-0 bg-transparent">
+                                <div class="row g-0 align-items-center">
+                                    <!-- Partie Gauche : L'image -->
+                                    <div class="col-12 col-md-6">
+                                        <img src="/assets/images/pexels-kindelmedia-6773950.jpg"
+                                            class="img-fluid w-100 object-fit-cover responsive-carousel-img rounded"
+                                            alt="...">
+                                    </div>
+                                    <!-- Partie Droite : Le texte à l'extérieur -->
+                                    <div class="col-12 col-md-6">
+                                        <div class="card-body p-4 p-md-5">
+                                            <h5 class="card-title fw-bold fs-4 fs-md-2 text-dark">Bilan de la prestation
+                                                de coaching</h5>
+                                            <p class="card-text">Signature du Bilan & Evaluation par les 2 parties</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </section>
-        <section class="hero-section" id="fond-stats">
+        <section class="hero-section fond-stats">
             <div class="hero-container text-center section-title">
                 <h1 class="display-4 fw-bold color-titrelogo">Faites le 1er pas<br>30 minutes pour faire
                     connaissance</h1>
@@ -297,39 +330,52 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
     </main>
     <button class="scroll-top" id="monBouton"><i class="fa-solid fa-arrow-up"></i></button>
     <!-- Pied de page -->
-    <footer class="mt-auto">
+    <footer class="mt-auto bg-light py-4">
         <div class="container">
-            <div class="row">
-                 <div class="col-md-4 mb-3">
-                    <p>Suivez moi</p>
-                    <ul class="list-inline social-icons">
-                        <li class="list-inline-item"><a href="pages/rendezvous.html" rel="noopener noreferrer">
-                                <i class="fa-brands fa-facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="https://www.linkedin.com/in/dominique-ferjule-4043803aa"
-                                rel="noopener noreferrer">
-                                <i class="fa-brands fa-square-linkedin"></i></a></li>
-                        <li class="list-inline-item"><a href="pages/apropos.html" rel="noopener noreferrer">
-                                <i class="fa-brands fa-instagram"></i></a></li>
+            <!-- Première ligne : Réseaux Sociaux -->
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <p class="fw-bold mb-2">Suivez-moi</p>
+                    <ul class="list-inline social-icons mb-0">
+                        <li class="list-inline-item mx-2">
+                            <a href="pages/rendezvous.html" rel="noreferrer" class="text-dark fs-4">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item mx-2">
+                            <a href="https://www.linkedin.com/in/dominique-ferjule-4043803aa" rel="noopener noreferrer"
+                                class="text-dark fs-4">
+                                <i class="fa-brands fa-square-linkedin"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item mx-2">
+                            <a href="pages/apropos.html" rel="noreferrer" class="text-dark fs-4">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="row text-black">
-                <div class="col-md-3 text-center">
-                    <p><i class="fa-regular fa-copyright"></i> 2026 - Em'Coaching Pro</p>
+
+            <hr class="my-4 text-muted">
+
+            <!-- Deuxième ligne : Crédits & Liens légaux -->
+            <div class="row text-black justify-content-center gy-2">
+                <div class="col-md-4 text-center">
+                    <p class="mb-0"><i class="fa-regular fa-copyright"></i> 2026 - Em'Coaching Pro</p>
                 </div>
                 <div class="col-md-3 text-center">
-                    <p>Mentions légales.</p>
+                    <p class="mb-0"><a href="#" class="text-decoration-none text-dark">Mentions légales</a></p>
                 </div>
                 <div class="col-md-3 text-center">
-                    <p>Politique de cookie.</p>
+                    <p class="mb-0"><a href="#" class="text-decoration-none text-dark">Politique de cookies</a></p>
                 </div>
-            </div><hr class="mb-4">            
+            </div>
         </div>
     </footer>
     <!-- Lien JS Bootstrap -->
-    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
-        crossorigin="anonymous"></script>
+    <script type="module"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/assets/js/main.js"></script>
 </body>
 

@@ -1,4 +1,5 @@
 body {
+    flex: 1;
     font-family: Cookie;
     font-style: normal;
     font-variant: normal;
@@ -75,11 +76,6 @@ header {
     right: 0;
     bottom: 0;
     pointer-events: none;
-}
-
-#titre-site:hover {
-    filter: brightness(1.2);
-    scale: 1.1;
 }
 
 #accueilbtn-rdv {
@@ -267,28 +263,75 @@ footer {
     margin-top: 100px;
 }
 
-.carousel-item {
-    height: 550px;
+.carousel-inner {
+    position: relative;
+    overflow: hidden;   
+    height: 60%;
+    /*width: 40%;*/
+}
+
+.carousel-item {  
+   /* object-fit: cover;*/
+    position: relative;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 100%;
+    /*height: 100%;*/
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    pointer-events: none;
+    padding: 20px;
+    z-index: 5;
 }
 
 /* Hauteur pour les tablettes (768px et plus) */
 @media (min-width: 768px) {
     .carousel-item {
-        height: 450px;
+        height: 700px;
     }
 }
 
 /* Hauteur pour les écrans d'ordinateurs (992px et plus) */
 @media (min-width: 992px) {
     .carousel-item {
-        height: 600px;
+        height: 700px;
     }
 }
 
 .carousel-item img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
+    display: block;
+    aspect-ratio: 16/9;   
+    image-rendering: crisp-edges;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    background-color: white;
+}
+
+.responsive-carousel-img {
+    height: 600px; /* Hauteur par défaut (Mobile) */
+  }
+  
+  @media (min-width: 768px) {
+    .responsive-carousel-img {
+      height: 400px; /* Hauteur pour Tablettes (Medium) */
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .responsive-carousel-img {
+      height: 400px; /* Hauteur pour Ordinateurs (Large) */
+    }
+  }
+.carouselText {
+    max-width: 100%;
+    pointer-events: auto;
+    font-size: 30px;
+    font-weight: 500;
 }
 
 .card-title {
@@ -414,6 +457,7 @@ footer {
     font-style: normal;
     font-variant: normal;
     font-weight: 600;
+    margin-bottom: 30px;
 }
 
 /* page A propos*/
@@ -573,7 +617,7 @@ footer {
     /* Bootstrap primary color on hover */
 }
 
-.nav-link.active {
+.nav-link.active {  
     color: #007bff !important;
     font-size: 20px;
     /* Override default active color */
@@ -612,11 +656,14 @@ footer {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    gap: 10px;
 }
-.container2 {    
+
+.container2 {
     display: flex;
     width: 100%;
 }
+
 /* Section de gauche */
 
 .image-section img {
@@ -624,8 +671,7 @@ footer {
     max-width: 100%;
     height: auto;
     /* Conserve les proportions de l'image */
-    display: block;
-    /* Supprime l'espace vide sous l'image */
+    display: flex;
     margin: 0 auto;
     /* Centre l'image horizontalement */
 }
@@ -634,8 +680,6 @@ footer {
     max-width: 100%;
     max-height: 100%;
     /* Conserve les proportions de l'image */
-    display: block;
-    /* Supprime l'espace vide sous l'image */
     margin: 0 auto;
     /* Centre l'image horizontalement */
     overflow: hidden;
@@ -724,7 +768,7 @@ h1 {
     /* Ligne pleine */
 }
 
-#fond-stats {
+.fond-stats {
     background: linear-gradient(to bottom, #FFFFFF 0%, #BBE2FA 45%, #2B96FA 100%);
     /*background: linear-gradient(to bottom, #FFFFFF 0%, #007BFF 45%, #3D261A 100%);*/
 }
@@ -990,28 +1034,40 @@ ul {
     margin: 0;
     padding: 0;
 }
-    /* Crée les 3 colonnes côte à côte */
-    .rangee {
-      display: flex;
-      gap: 20px; /* Espace entre les colonnes */
-    }
 
-    /* Donne la même largeur aux 3 colonnes (33% chacune) */
-    .colonne {
-      flex: 1;
-      padding: 15px;
-      background-color: #f4f4f4;
-      border: 1px solid #ddd;
-    }
+/* Crée les 3 colonnes côte à côte */
+.rangee {
+    display: flex;
+    gap: 20px;
+    /* Espace entre les colonnes */
+}
 
-    /* LA RÈGLE MAGIQUE : Empêche l'image de dépasser */
-    .colonne img {
-      max-width: 100%;      
-      display: block; /* Supprime l'espace vide sous l'image */
-      margin: 0 auto; /* Centre l'image horizontalement */
-    }
+/* Donne la même largeur aux 3 colonnes (33% chacune) */
+.colonne {
+    flex: 1;
+    padding: 15px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+}
 
-    /* Page Témoignages */
-    .bi-star-fill { color: #ffc107 !important; }
+/* LA RÈGLE MAGIQUE : Empêche l'image de dépasser */
+.colonne img {
+    max-width: 100%;
+    display: block;
+    /* Supprime l'espace vide sous l'image */
+    margin: 0 auto;
+    /* Centre l'image horizontalement */
+}
 
-   
+/* Page Témoignages */
+.bi-star-fill {
+    color: #ffc107 !important;
+}
+
+
+/* page index - section ce que je vous apporte */
+#serviceModalBody {
+    white-space: pre-line;
+    /* Permet de respecter les retours à la ligne du texte brut */
+}
+
