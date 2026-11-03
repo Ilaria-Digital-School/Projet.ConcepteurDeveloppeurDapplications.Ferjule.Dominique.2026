@@ -14,7 +14,7 @@ function validerDate() {
   if (!saisie) {
     // si champ vide il n'y aura pas de contrôle dans la base de données  
     // console.error("Veuillez sélectionner une date et une heure.");
-    conteneurMessage.textContent = "⚠️ Veuillez sélectionner une date et une heure.";
+    conteneurMessage.textContent = "⚠️ Veuillez sélectionner une date et une heure !";
     conteneurMessage.style.color = "#d97706"; // Couleur orange
     return;
   } else {
@@ -22,9 +22,9 @@ function validerDate() {
     // 0 = Dimanche, 6 = Samedi
     const indexJour = dateObj.getDay();
     if (indexJour === 0 || indexJour === 6) {
-      // console.error("❌ Erreur : Pas de consultation le week-end.");
+      // console.error("❌ Erreur : Pas de consultation le week-end !");
       // Code pour afficher l'erreur HTML...
-      conteneurMessage.textContent = "⚠️ Erreur : Pas de consultation le week-end.";
+      conteneurMessage.textContent = "⚠️ Erreur : Je suis indisponible le week-end !";
       conteneurMessage.style.color = "#dc3545"; // Rouge d'erreur  
     } else {
       // Extraction date avant mise en forme (padStart) 
