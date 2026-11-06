@@ -794,6 +794,9 @@ h1 {
         margin-bottom: 0rem;
         letter-spacing: 0px;
     }
+    .container2{
+            flex-wrap: wrap;
+    }
 
 }
 
