@@ -717,16 +717,6 @@ footer {
     width: 100%;
 }
 
-/* Typographies */
-h1 {
-    font-family: 'Syne', sans-serif;
-    /* Titre graphique */
-    font-size: 3.0rem;
-    font-weight: 600;
-    line-height: 1.05;
-    margin-bottom: 2rem;
-    letter-spacing: -1.5px;
-}
 
 .description {
     font-size: 1.8rem;
@@ -782,6 +772,7 @@ h1 {
     h1 {
         font-size: 1.5rem;
     }
+ 
 
     .description {
         font-size: 1.4rem;
@@ -1074,3 +1065,7 @@ ul {
     /* Permet de respecter les retours à la ligne du texte brut */
 }
 
+/* page connexion - gestion du libellé du bouton : afficher ou masquer */
+#status-mdp{
+    display: none;
+}
