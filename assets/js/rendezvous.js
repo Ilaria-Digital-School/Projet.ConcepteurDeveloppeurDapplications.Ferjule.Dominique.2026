@@ -16,7 +16,7 @@ function validerDate() {
     // console.error("Veuillez sélectionner une date et une heure.");
     conteneurMessage.textContent = "⚠️ Veuillez sélectionner une date et une heure !";
     conteneurMessage.style.color = "#d97706"; // Couleur orange
-    return;
+    return; 
   } else {
     const dateObj = new Date(saisie);
     // 0 = Dimanche, 6 = Samedi

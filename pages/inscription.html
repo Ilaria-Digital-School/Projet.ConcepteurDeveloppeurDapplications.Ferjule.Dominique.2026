@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <!-- To ensure proper rendering and touch zooming,  
@@ -18,8 +19,6 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
     <!-- Lien CSS Bootstrap 6 CDN-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Lien vers fichier CSS -->
-
-    <!-- Lien vers fichier CSS -->
     <link rel="stylesheet" href="/assets/css/style2.css">
     <!-- Lien FontAwsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
@@ -31,7 +30,7 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
             <nav class="navbar md:navbar-expand bg-1" data-bs-theme="dark">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
-                    <img src="/assets/images/logoemcoach.png" alt="Logo entreprise"
+                        <img src="/assets/images/logoemcoach.png" alt="Logo entreprise"
                             class="d-inline-block align-text-top" id="logo">
                     </a>
                     <a class="navbar-brand color-titrelogo" href="#" id="nomSociete">
@@ -64,20 +63,10 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                                     <a class="nav-link" href="/pages/rendezvous.html">Prendre rendez-vous</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Inscription</a>
+                                    <a class="nav-link" href="/pages/connexion.html">Mon compte</a>
                                 </li>
-                            </ul>
-                            <ul class="nav navbar-nav me-auto">
                                 <li class="nav-item">
-                                    <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
-                                        Accès
-                                    </button>
-                                    <div class="menu">
-                                        <a class="menu-item" href="/pages/connexion.html">Mon compte</a>
-                                        <hr class="menu-divider">
-                                        <a class="menu-item  disabled" aria-disabled="true"
-                                            href="/pages/inscription.html">S'inscrire</a>
-                                    </div>
+                                    <a class="nav-link active" aria-current="page" href="#">Inscription</a>
                                 </li>
                             </ul>
                         </div>
@@ -87,26 +76,116 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
         </div>
     </header>
     <main>
-        <form class="formulaire">
-            <fieldset class="inscription-fieldset">
-                <legend>Informations Personnelles</legend>
-                <div>
-                    <label for="nom">Nom :</label>
-                    <input type="text" name="nom" id="nom" placeholder="Nom de l'utilisateur" required>
+        <section id="bg-connexion">
+            <!-- Conteneur plein écran avec image de fond -->
+            <div class="min-vh-100 d-flex align-items-center py-5 img-inscription">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 md:col-8 lg:col-5">
+                            <!-- Carte translucide native Bootstrap 6 -->
+                            <div class="card card-translucent shadow-lg rounded-4 card-connexion">
+                                <div class="card-body p-4 md:p-5">
+                                    <!-- En-tête de la carte -->
+                                    <div class="text-center mb-4">
+                                        <h1 class="card-title fw-bold mb-1 color-titrelogo">Inscription</h1>
+                                        <p class="fg-3 small mb-0">Saisissez les informations demandées</p>
+                                    </div>
+                                    <!-- Votre formulaire -->
+                                    <form id="formulaire-inscription">
+                                        <!-- Champ Nom -->
+                                        <div class="form-field mb-3">
+                                            <label for="champ-nom" class="form-label fw-semibold">Nom</label>
+                                            <input type="text" class="form-control form-control-lg" id="champ-nom"
+                                                autocomplete="off" placeholder="Saisissez votre nom">
+                                            <span id="statut-nom" class="d-block small mt-1"></span>
+                                        </div>
+                                        <!-- Champ Email -->
+                                        <div class="form-field mb-3">
+                                            <label for="champ-email" class="form-label fw-semibold">Adresse
+                                                email</label>
+                                            <input type="email" class="form-control form-control-lg" id="champ-email"
+                                                autocomplete="off" placeholder="email@exemple.com">
+                                            <span id="statut-email" class="d-block small mt-1"></span>
+                                        </div>
+
+                                        <!-- Champ Mot de passe -->
+                                        <div class="form-field mb-3">
+                                            <label for="champ-mdp" class="form-label fw-semibold">Mot de passe</label>
+                                            <div class="input-group input-group-lg">
+                                                <input type="password" class="form-control" id="champ-mdp"
+                                                    autocomplete="off" placeholder="Mot de passe">
+                                                <button class="btn-outline theme-secondary fs-6" type="button"
+                                                    id="toggle-mdp">
+                                                    👁️ Afficher
+                                                </button>
+                                            </div>
+                                            <span id="statut-mdp" class="d-block small mt-1"></span>
+
+                                            <!-- Encadré des critères -->
+                                            <div class="bg-2 rounded-3 p-3 mt-2 border">
+                                                <p class="small fw-semibold fg-2 mb-2">Le mot de passe doit contenir :
+                                                </p>
+                                                <ul id="criteres-mdp"
+                                                    class="list-unstyled mb-0 small d-flex flex-column gap-1 fw-medium">
+                                                    <li id="critere-longueur" class="fg-danger">❌ Au moins 8 caractères
+                                                    </li>
+                                                    <li id="critere-majuscule" class="fg-danger">❌ Au moins une lettre
+                                                        majuscule</li>
+                                                    <li id="critere-chiffre" class="fg-danger">❌ Au moins un chiffre
+                                                    </li>
+                                                    <li id="critere-special" class="fg-danger">❌ Au moins un caractère
+                                                        spécial (!@#$%^&*)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- Champ Confirmer le mot de passe -->
+                                        <div class="form-field mb-3">
+                                            <label for="champ-mdp-confirm" class="form-label fw-semibold">Confirmer le
+                                                mot de passe</label>
+                                            <div class="input-group input-group-lg">
+                                                <input type="password" class="form-control" id="champ-mdp-confirm"
+                                                    autocomplete="off" placeholder="Confirmer le mot de passe">
+                                                <button class="btn-outline theme-secondary fs-6" type="button"
+                                                    id="toggle-mdp-confirm">
+                                                    👁️ Afficher
+                                                </button>
+                                            </div>
+                                            <span id="statut-mdp-confirm" class="d-block small mt-1"></span>
+                                        </div>
+                                        <!-- Case à cocher -->
+                                        <div class="mb-4">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                                                <label class="form-check-label fg-2 fw-medium" for="dropdownCheck">
+                                                    Se souvenir de moi
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <!-- Bouton de validation (sans .btn devant .btn-solid) -->
+                                        <div class="d-grid">
+                                            <button type="submit"
+                                                class="btn-solid theme-primary btn-lg fw-semibold shadow-sm"
+                                                id="btn-submit" disabled>
+                                                Se connecter
+                                            </button>
+                                        </div>
+
+                                    </form>
+                                    <!-- Fin du formulaire -->
+
+                                </div>
+                            </div>
+                            <!-- Fin de la carte -->
+
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <label for="email">Email de l'utilisateur :</label>
-                    <input type="email" id="email" placeholder="exemple@gmail.com" required>
-                </div>
-                <div>
-                    <label for="mdp">Mot de passe :</label>
-                    <input type="password" id="mdp" placeholder="Mot de passe attribué à l'utilisateur" required>
-                </div>
-            </fieldset>
-            <button type="submit">Enregistrer un utilisateur</button>
-        </form>
+
+            </div>
+        </section>
     </main>
-    
+    <button aria-label="buttontop" class="scroll-top" id="monBouton"><i class="fa-solid fa-arrow-up"></i></button>
     <!-- Pied de page -->
     <footer class="mt-auto bg-light py-4">
         <div class="container">
@@ -116,18 +195,19 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                     <p class="fw-bold mb-2">Suivez-moi</p>
                     <ul class="list-inline social-icons mb-0">
                         <li class="list-inline-item mx-2">
-                            <a href="pages/rendezvous.html" rel="noreferrer" class="text-dark fs-4">
+                            <a aria-label="facebook" href="pages/rendezvous.html" rel="noreferrer"
+                                class="text-dark fs-4">
                                 <i class="fa-brands fa-facebook"></i>
                             </a>
                         </li>
                         <li class="list-inline-item mx-2">
-                            <a href="https://www.linkedin.com/in/dominique-ferjule-4043803aa" rel="noopener noreferrer"
-                                class="text-dark fs-4">
+                            <a aria-label="linkedin" href="https://www.linkedin.com/in/dominique-ferjule-4043803aa"
+                                rel="noopener noreferrer" class="text-dark fs-4">
                                 <i class="fa-brands fa-square-linkedin"></i>
                             </a>
                         </li>
                         <li class="list-inline-item mx-2">
-                            <a href="pages/apropos.html" rel="noreferrer" class="text-dark fs-4">
+                            <a aria-label="linkedin" href="pages/apropos.html" rel="noreferrer" class="text-dark fs-4">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                         </li>
@@ -154,7 +234,7 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
     <!-- Lien JS Bootstrap -->
     <script type="module"
         src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/inscription.js"></script>
 </body>
 
 </html>

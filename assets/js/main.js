@@ -50,10 +50,10 @@ container.innerHTML = servicesData.map((service, index) => `
           <i class="fa-solid ${service.icon} fa-4x"></i>
         </div>
         <div class="card-body text-center">
-          <h2 class="card-title">${service.title}</h2>
+          <h3 class="card-title">${service.title}</h3>
         </div>
         <div class="card-footer bg-transparent border-0 text-center pb-3">
-          <small class="fg-4 fw-bolder d-block mb-3">${service.footerText}</small>
+          <h4 class="fg-4 fw-bolder d-block mb-3">${service.footerText}</h4>
           <!-- Déclencheurs natifs Bootstrap 6 pour ouvrir le Dialog -->
           <button type="button" 
                   class="btn-solid theme-primary btn-xs btn-en-savoir-plus" 

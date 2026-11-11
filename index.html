@@ -62,19 +62,13 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                                 <li class="nav-item">
                                     <a class="nav-link" href="pages/rendezvous.html">Prendre rendez-vous</a>
                                 </li>
-                            </ul>
-                            <ul class="nav navbar-nav me-auto">
                                 <li class="nav-item">
-                                    <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
-                                        Accès
-                                    </button>
-                                    <div class="menu">
-                                        <a class="menu-item" href="pages/connexion.html">Mon compte</a>
-                                        <hr class="menu-divider">
-                                        <a class="menu-item" href="pages/inscription.html">S'inscrire</a>
-                                    </div>
+                                    <a class="nav-link" href="pages/connexion.html">Mon compte</a>
                                 </li>
-                            </ul>
+                                   <li class="nav-item">
+                                    <a class="nav-link" href="pages/inscription.html">Inscription</a>
+                                </li>
+                            </ul>                            
                         </div>
                     </dialog>
                 </div>
@@ -118,7 +112,7 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
             <div class="container my-5 py-5">
                 <div class="row text-center mb-5">
                     <div>
-                        <h1 class="display-4 fw-bold color-titrelogo">Ce Que Je Vous Apporte</h1>
+                        <h2 class="display-4 fw-bold color-titrelogo">Ce Que Je Vous Apporte</h2>
                     </div>
                 </div>
                 <!-- Grille responsive Bootstrap 6 -->
@@ -129,7 +123,7 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
         <!-- Modale v6 utilisant la balise native <dialog> -->
         <dialog class="dialog dialog-lg" id="serviceModal">
             <div class="dialog-header">
-                <h5 class="dialog-title fw-bold" id="serviceModalLabel">Titre du Service</h5>
+                <h3 class="dialog-title fw-bold" id="serviceModalLabel">Titre du Service</h3>
                 <!-- Fermeture native v6 sans JS -->
                 <button type="button" class="btn-close" commandfor="serviceModal" command="close"
                     aria-label="Close"></button>
@@ -150,7 +144,7 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                 <!-- Section Droite : Contenu -->
                 <section class="content-section">
                     <div class="content-wrapper">
-                        <h1 class="color-titrelogo">Types d'Accompagnement</h1>
+                        <h2 class="display-4 fw-bold color-titrelogo">Types d'Accompagnement</h2>
                         <!-- Section des compétences / statistiques -->
                         <div class="skills-container">
                             <div class="skill-item">
@@ -197,7 +191,7 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
             </div>
         </section>
         <section class="section">
-            <h1 class="color-titrelogo text-center">Ma Méthode d'Accompagnement en 4 étapes</h1>
+            <h2 class="display-4 fw-bold color-titrelogo text-center">Ma Méthode d'Accompagnement en 4 étapes</h2>
             <div id="carouselEndsWrap" class="carousel slide" data-bs-ends="wrap">
                 <div class="d-flex justify-content-between align-items-center">
                     <ol class="stepper stepper-horizontal w-100">
@@ -231,14 +225,14 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                                     <div class="w-100 w-md-50 position-relative" style="min-height: 250px;">
                                         <img src="/assets/images/pexels-polina-zimmerman-3958461.jpg"
                                             class="img-fluid w-100 object-fit-cover responsive-carousel-img rounded"
-                                            alt="...">
+                                            alt="étape nO 1 rendez-vous">
                                     </div>
                                     <!-- Partie Droite : Le texte à l'extérieur -->
                                     <div class="w-100 w-md-50 d-flex align-items-center">
                                         <div class="card-body p-4 p-md-5">
-                                            <h5 class="card-title fw-bold fs-4 fs-md-2 text-dark">30 minutes pour faire
-                                                le point</h5>
-                                            <p class="card-text text-muted">1er entretien gratuit</p>
+                                            <h3 class="card-title fw-bold fs-4 fs-md-2 text-dark">30 minutes pour faire
+                                                le point</h3>
+                                            <h4 class="card-text text-muted">1er entretien gratuit</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -253,14 +247,14 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                                     <div class="col-12 col-md-6">
                                         <img src="/assets/images/pexels-maksgelatin-5430243.jpg"
                                             class="img-fluid w-100 object-fit-cover responsive-carousel-img rounded"
-                                            alt="...">
+                                            alt="étape nO 2 signature contrat">
                                     </div>
                                     <!-- Partie Droite : Le texte à l'extérieur -->
                                     <div class="col-12 col-md-6">
                                         <div class="card-body p-4 p-md-5">
-                                            <h5 class="card-title fw-bold fs-4 fs-md-2 text-dark">Signature du Contrat
-                                                de Coaching</h5>
-                                            <p class="card-text">Définissons une stratégie sur-mesure</p>
+                                            <h3 class="card-title fw-bold fs-4 fs-md-2 text-dark">Signature du Contrat
+                                                de Coaching</h3>
+                                            <h4 class="card-text">Définissons une stratégie sur-mesure</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -275,14 +269,14 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                                     <div class="col-12 col-md-6">
                                         <img src="/assets/images/pexels-yunus-kilic-55235055-30858977.jpg"
                                             class="img-fluid w-100 object-fit-cover responsive-carousel-img rounded"
-                                            alt="...">
+                                            alt="étape nO 3 séances de coaching">
                                     </div>
                                     <!-- Le texte à l'extérieur -->
                                     <div class="col-12 col-md-6">
                                         <div class="card-body p-4 p-md-5">
-                                            <h5 class="card-title fw-bold fs-4 fs-md-2 text-sucess">Séances de coaching
-                                            </h5>
-                                            <p class="card-text text-sucess"><em>Atteignez vos objectifs avec mon aide</em></p>
+                                            <h3 class="card-title fw-bold fs-4 fs-md-2 text-sucess">Séances de coaching
+                                            </h3>
+                                            <h4 class="card-text">Atteignez vos objectifs avec mon aide</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -297,14 +291,14 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                                     <div class="col-12 col-md-6">
                                         <img src="/assets/images/pexels-kindelmedia-6773950.jpg"
                                             class="img-fluid w-100 object-fit-cover responsive-carousel-img rounded"
-                                            alt="...">
+                                            alt="étape nO 4 bilan du coaching">
                                     </div>
                                     <!-- Partie Droite : Le texte à l'extérieur -->
                                     <div class="col-12 col-md-6">
                                         <div class="card-body p-4 p-md-5">
-                                            <h5 class="card-title fw-bold fs-4 fs-md-2 text-dark">Bilan de la prestation
-                                                de coaching</h5>
-                                            <p class="card-text">Signature du Bilan & Evaluation par les 2 parties</p>
+                                            <h3 class="card-title fw-bold fs-4 fs-md-2 text-dark">Bilan de la prestation
+                                                de coaching</h3>
+                                            <h4 class="card-text">Signature du Bilan & Evaluation par les 2 parties</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -315,9 +309,9 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
         </section>
         <section class="hero-section fond-stats">
             <div class="hero-container text-center section-title">
-                <h1 class="display-4 fw-bold color-titrelogo">Faites le 1er pas<br>30 minutes pour faire
-                    connaissance</h1>
-                <h2 class="description">Appel gratuit et sans engagement</h2>
+                <h2 class="display-4 fw-bold color-titrelogo">Faites le 1er pas<br>30 minutes pour faire
+                    connaissance</h2>
+                <h3 class="description">Appel gratuit et sans engagement</h3>
                 <a href="./pages/rendezvous.html" class="view-details-btn">Prenez rendez-vous
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -328,7 +322,7 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
             </div>
         </section>
     </main>
-    <button class="scroll-top" id="monBouton"><i class="fa-solid fa-arrow-up"></i></button>
+    <button aria-label="buttontop" class="scroll-top" id="monBouton"><i class="fa-solid fa-arrow-up"></i></button>
     <!-- Pied de page -->
     <footer class="mt-auto bg-light py-4">
         <div class="container">
@@ -338,18 +332,18 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                     <p class="fw-bold mb-2">Suivez-moi</p>
                     <ul class="list-inline social-icons mb-0">
                         <li class="list-inline-item mx-2">
-                            <a href="pages/rendezvous.html" rel="noreferrer" class="text-dark fs-4">
+                            <a aria-label="facebook" href="pages/rendezvous.html" rel="noreferrer" class="text-dark fs-4">
                                 <i class="fa-brands fa-facebook"></i>
-                            </a>
+                           </a>
                         </li>
                         <li class="list-inline-item mx-2">
-                            <a href="https://www.linkedin.com/in/dominique-ferjule-4043803aa" rel="noopener noreferrer"
+                            <a aria-label="linkedin" href="https://www.linkedin.com/in/dominique-ferjule-4043803aa" rel="noopener noreferrer"
                                 class="text-dark fs-4">
                                 <i class="fa-brands fa-square-linkedin"></i>
                             </a>
                         </li>
                         <li class="list-inline-item mx-2">
-                            <a href="pages/apropos.html" rel="noreferrer" class="text-dark fs-4">
+                            <a aria-label="linkedin" href="pages/apropos.html" rel="noreferrer" class="text-dark fs-4">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                         </li>

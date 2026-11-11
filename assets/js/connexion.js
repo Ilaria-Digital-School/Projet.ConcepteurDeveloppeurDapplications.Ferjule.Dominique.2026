@@ -8,7 +8,6 @@ document.querySelector(".scroll-top").addEventListener("click", function () {
 const formulaire = document.getElementById('formulaire-inscription');
 const champEmail = document.getElementById('champ-email');
 const champMdp = document.getElementById('champ-mdp');
-const champNom = document.getElementById('champ-nom');
 const btnToggle = document.getElementById('toggle-mdp');
 const statMdp = document.getElementById('statut-mdp');
 const btnSubmit = document.getElementById('btn-submit');
@@ -31,8 +30,8 @@ function majCritere(element, estValide, texte) {
 }
 // Fonction centrale qui active ou désactive le bouton d'envoi "se connecter"
 function majBoutonEnvoi() {
-  // console.log('mail', etatFormulaire.email, 'mdp', etatFormulaire.mdp, 'nom', etatFormulaire.nom);
-  const toutEstValide = etatFormulaire.email && etatFormulaire.mdp && etatFormulaire.nom;
+  // console.log('mail', etatFormulaire.email, 'mdp', etatFormulaire.mdp);
+  const toutEstValide = etatFormulaire.email && etatFormulaire.mdp;
   // Si tout est valide (true), !toutEstValide vaut false, donc btnSubmit.disabled = false (le bouton s'active).
   btnSubmit.disabled = !toutEstValide;
 }
@@ -65,8 +64,7 @@ champMdp.addEventListener('input', (event) => {
 // État global de validation de chaque champ
 const etatFormulaire = {
   email: false,
-  mdp: false,
-  nom: false
+  mdp: false 
 };
 
 
@@ -109,24 +107,6 @@ btnToggle.addEventListener('click', () => {
   }
 });
 //
-// Contrôle saisie du nom : regex => accepte uniquement les lettres (majuscules, minuscules et accents)
-//
-const regexLettres = /^[a-zA-ZÀ-ÿ]+$/;
-champNom.addEventListener('input', () => {
-  // .trim() permet d'ignorer les espaces vides au début et à la fin
-  const valeur = champNom.value.trim();
-  // 3. Condition de validation (exemple : minimum 5 caractères)
-  // Vérifie si la valeur correspond uniquement à des lettres
-  if (regexLettres.test(valeur)) {
-    etatFormulaire.nom = true;
-    document.getElementById('statut-nom').textContent = '✅';
-  } else {
-    etatFormulaire.nom = false;
-    document.getElementById('statut-nom').textContent = '❌';
-  }
-  majBoutonEnvoi();
-});
-//
 // 4. Double sécurité lors de la soumission (ex: touche Entrée)
 //
 formulaire.addEventListener('submit', (event) => {
@@ -135,5 +115,5 @@ formulaire.addEventListener('submit', (event) => {
     return;
   }
   event.preventDefault(); // À retirer pour un vrai envoi serveur
-  alert('Message en attente vrai envoi vers serveur : Formulaire valide et envoyé !');
+  alert('Message en attente vrai envoi vers serveur : Formulaire valide et envoyé ! Accès à votre compte validé');
 });

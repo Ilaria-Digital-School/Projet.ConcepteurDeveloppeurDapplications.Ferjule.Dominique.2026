@@ -62,19 +62,13 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#">Prendre rendez-vous</a>
                                 </li>
-                            </ul>
-                            <ul class="nav navbar-nav me-auto">
                                 <li class="nav-item">
-                                    <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
-                                        Accès
-                                    </button>
-                                    <div class="menu">
-                                        <a class="menu-item" href="/pages/connexion.html">Mon compte</a>
-                                        <hr class="menu-divider">
-                                        <a class="menu-item" href="/pages/inscription.html">S'inscrire</a>
-                                    </div>
+                                    <a class="nav-link" href="/pages/connexion.html">Mon compte</a>
                                 </li>
-                            </ul>
+                                   <li class="nav-item">
+                                    <a class="nav-link" href="/pages/inscription.html">Inscription</a>
+                                </li>
+                            </ul>                            
                         </div>
                     </dialog>
                 </div>
@@ -97,7 +91,7 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                         <div id="status-message" style="margin-top: 10px; font-weight: bold;"></div>
                         <!-- input et bouton séparés sur la même ligne -->
                         <div class="d-flex align-items-center gap-2">
-                            <input type="datetime-local" class="form-control" id="rdv" name="rdv">
+                            <input aria-label="date saisie" type="datetime-local" class="form-control" id="rdv" name="rdv">
                             <button type="button"
                                 class="btn btn-sm btn-outline-warning d-flex align-items-center gap-1"
                                 onclick="validerDate()">Valider</button>
@@ -107,9 +101,9 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
             </div>
         </section>
     </main>
-    <button class="scroll-top" id="monBouton"><i class="fa-solid fa-arrow-up"></i></button>
+    <button aria-label="buttontop" class="scroll-top" id="monBouton"><i class="fa-solid fa-arrow-up"></i></button>
     <!--Fin Rendez-vous-->
-    <!-- Pied de page -->
+<!-- Pied de page -->
     <footer class="mt-auto bg-light py-4">
         <div class="container">
             <!-- Première ligne : Réseaux Sociaux -->
@@ -118,25 +112,27 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                     <p class="fw-bold mb-2">Suivez-moi</p>
                     <ul class="list-inline social-icons mb-0">
                         <li class="list-inline-item mx-2">
-                            <a href="pages/rendezvous.html" rel="noreferrer" class="text-dark fs-4">
+                            <a aria-label="facebook" href="pages/rendezvous.html" rel="noreferrer" class="text-dark fs-4">
                                 <i class="fa-brands fa-facebook"></i>
-                            </a>
+                           </a>
                         </li>
                         <li class="list-inline-item mx-2">
-                            <a href="https://www.linkedin.com/in/dominique-ferjule-4043803aa" rel="noopener noreferrer"
+                            <a aria-label="linkedin" href="https://www.linkedin.com/in/dominique-ferjule-4043803aa" rel="noopener noreferrer"
                                 class="text-dark fs-4">
                                 <i class="fa-brands fa-square-linkedin"></i>
                             </a>
                         </li>
                         <li class="list-inline-item mx-2">
-                            <a href="pages/apropos.html" rel="noreferrer" class="text-dark fs-4">
+                            <a aria-label="linkedin" href="pages/apropos.html" rel="noreferrer" class="text-dark fs-4">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
+
             <hr class="my-4 text-muted">
+
             <!-- Deuxième ligne : Crédits & Liens légaux -->
             <div class="row text-black justify-content-center gy-2">
                 <div class="col-md-4 text-center">

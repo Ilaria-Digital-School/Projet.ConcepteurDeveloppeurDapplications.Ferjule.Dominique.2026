@@ -35,7 +35,7 @@ header {
 }
 
 .containerheader {
-    min-height: 23vh;
+    min-height: 10vh;
     background-color: black;
     mask-image:
         radial-gradient(ellipse at top, #e66465, transparent),
@@ -1005,7 +1005,6 @@ footer {
 #monBouton:hover {
     background-color: #0000D1;
     transform: scale(1.1);
-
 }
 
 /* section Apport */
@@ -1068,4 +1067,26 @@ ul {
 /* page connexion - gestion du libellé du bouton : afficher ou masquer */
 #status-mdp{
     display: none;
+}
+.img-connexion{
+background: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.65));
+background-image: url(/assets/images/pexels-diva-33485191.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+.card-connexion{
+background-color: rgba(255, 255, 255, 0.35);
+backdrop-filter: blur(18px);
+border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+/* Page Inscription image de fond */
+.img-inscription{
+background: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.65));
+background-image: url(/assets/images/pexels-reilua-s-86001814-33723201.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 }
