@@ -37,7 +37,7 @@ function majCritere(element, estValide, texte) {
 // Fonction centrale qui active ou désactive le bouton d'envoi "se connecter"
 function majBoutonEnvoi() {
   // console.log('mail', etatFormulaire.email, 'mdp', etatFormulaire.mdp, 'nom', etatFormulaire.nom);
-  const toutEstValide = etatFormulaire.email && etatFormulaire.mdp && etatFormulaire.nom;
+  const toutEstValide = etatFormulaire.email && etatFormulaire.mdp && etatFormulaire.nom && etatFormulaire.mdpConfirm;
   // Si tout est valide (true), !toutEstValide vaut false, donc btnSubmit.disabled = false (le bouton s'active).
   btnSubmit.disabled = !toutEstValide;
 }
@@ -72,7 +72,8 @@ champMdp.addEventListener('input', (event) => {
 const etatFormulaire = {
   email: false,
   mdp: false,
-  nom: false
+  nom: false,
+  mdpConfirm:false
 };
 
 
@@ -122,7 +123,7 @@ configurerBoutonAffichage(toggleConfirm, inputConfirm);
 function verifierCorrespondance() { 
   if (etatFormulaire.mdp === false) {
     statutConfirm.textContent = '';
-    statutConfirm.className = 'd-block small mt-1';
+    statutConfirm.className = 'd-block small mt-1';   
  //  console.log('erreur mot de passe initial => comparaison mots de passe impossible');
     return;
   }
@@ -134,18 +135,24 @@ function verifierCorrespondance() {
   if (valConfirm.length === 0) {
     statutConfirm.textContent = '';
     statutConfirm.className = 'd-block small mt-1';
+    etatFormulaire.mdpConfirm = false; 
     return;
   }
 
   if (valMdp === valConfirm) {
     statutConfirm.textContent = '✅ Les mots de passe correspondent.';
     statutConfirm.className = 'd-block small mt-1 text-success fw-medium';
+    inputConfirm.style.borderColor = 'green';
+    etatFormulaire.mdpConfirm = true;
 //     console.log('Youpi Correspondance entre mots de passe');
   } else {
     statutConfirm.textContent = '❌ Les mots de passe ne correspondent pas.';
     statutConfirm.className = 'd-block small mt-1 fg-danger fw-medium';
+    inputConfirm.style.borderColor = 'red';
+    etatFormulaire.mdpConfirm = false;
 //    console.log('pas de correspondance entre mots de passe');
   }
+majBoutonEnvoi();
 }
 //
 // Vérification lors de la saisie dans le champ de confirmation du mot de passe
