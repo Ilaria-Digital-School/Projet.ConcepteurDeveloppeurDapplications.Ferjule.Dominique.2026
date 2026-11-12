@@ -8,7 +8,7 @@ document.querySelector(".scroll-top").addEventListener("click", function () {
 // 1. Base de données des services apportés
 // en C4-C5-C6 ces informations pourront provenir directement de la db SQL ou NoSQL
 // l'administrateur pourra gérer ces cartes supprimer, modifier, créer 
-  const servicesData = [
+  let servicesData = [
   {
     icon: "fa-hand-holding-heart",
     title: "Soutien jeunes adultes & adolescents",
@@ -37,12 +37,18 @@ document.querySelector(".scroll-top").addEventListener("click", function () {
     description: "Un accompagnement sur mesure pour traverser les périodes de doute en famille."
   }
 ];
-
 const container = document.getElementById('cards-container');
 const modalTitle = document.getElementById('serviceModalLabel');
 const modalBody = document.getElementById('serviceModalBody');
 
-// 2. Génération des cartes avec les commandes natives Bootstrap 6 (command et commandfor)
+//2. Génération des cartes avec les commandes natives Bootstrap 6 (command et commandfor)
+//container : le contenu va apparaître dedans
+//innerHTML : contient la chaîne de caractères générée à droite du signe égal
+//servicesData : source de données : tableau JavaScript (Array) contenant  liste des services
+//map : méthode de tableau, transforme le contenu du tableau et renvoie un nouveau tableau 
+//(service, index) : fonction fléchée exécutée pour chaque élément du tableau
+// service : représente l'élément actuel en cours de traitement
+// index : indique la position de l'élément traité(0, 1, 2...)
 container.innerHTML = servicesData.map((service, index) => `
     <div class="col">
       <div class="card h-100 d-flex flex-column">
@@ -64,10 +70,11 @@ container.innerHTML = servicesData.map((service, index) => `
           </button>
         </div>
       </div>
-    </div>
+    </div>       
   `).join('');
-
+// 
 // 3. Remplissage du texte brut lors du clic (l'ouverture est gérée nativement par le HTML)
+//
 container.addEventListener('click', (e) => {
   const button = e.target.closest('.btn-en-savoir-plus');
   if (button) {
