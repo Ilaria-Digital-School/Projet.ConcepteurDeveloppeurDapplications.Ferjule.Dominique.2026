@@ -50,7 +50,7 @@ header {
     /* Full width of the container */
     height: 110vh;
     /* Use viewport height for responsiveness */
-    background-image: url(/assets/images/ChatGPT\ Image\ 4\ sept.\ 2026\,\ 18_02_21.png);
+    background-image: url(/assets/images/ChatGPT\ Image\ 4\ sept.\ 2026\,\ 18_02_21.webp);
     background-color: black;
     mask-image:
         radial-gradient(ellipse at top, #e66465, transparent),
@@ -123,10 +123,7 @@ header {
     flex-direction: column;
     width: 100%;
     /* Full width of the container */
-    height: 110vh;
-    /* Use viewport height for responsiveness */
-    /* background-image: url(/assets/images/bckgrdcoach.png);    */
-    /*background-image: url(/assets/images/pexels-codioful-7135113.jpg);*/
+    height: 110vh;    
     mask-image:
         radial-gradient(ellipse at top, #e66465, transparent),
         radial-gradient(ellipse at bottom, #4d9f0c, transparent);
@@ -170,22 +167,6 @@ h1 {
     /*mix-blend-mode: exclusion;*/
     line-height: 1.2;
 }
-
-/*img:hover {
-    /*  filter: grayscale(100%); 
-    filter: brightness(1.2);
-    scale: 1.1;
-    /* L'effet se produit sur 0.5 seconde 
-}*/
-
-#hero-temoignages {
-    background-image: url(/assets/images/groupe-temoignages.jpg);
-}
-
-#hero-apropos {
-    background-image: url(/assets/images/pexels-cottonbro-4098232.jpg);
-}
-
 .section {
     padding: 6rem 0;
 }
@@ -195,10 +176,7 @@ h1 {
 }
 
 footer {
-    background-color: white;
-    /*mask-image:
-        radial-gradient(ellipse at top, #e66465, transparent),
-        radial-gradient(ellipse at bottom, #4d9f0c, transparent;*/
+    background-color: white;    
     padding: 2rem 0;
     padding-top: 90px;
 }
@@ -404,44 +382,6 @@ footer {
     height: 100%;
     z-index: 3;
 }
-
-.responsive-bg {
-    width: 100%;
-    /* Full width of the container */
-    height: 60vh;
-    /* Use viewport height for responsiveness */
-    background-image: url(/assets/images/bckgrdcoach.png);
-    background-size: cover;
-    /* Ensures image covers the container fully */
-    background-position: center;
-    /* Centers the image */
-    background-repeat: no-repeat;
-}
-
-/* Optional overlay for better text readability */
-.responsive-bg::before {
-    content: "";
-    inset: 0;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    /* Semi-transparent overlay */
-    pointer-events: none;
-    z-index: 1;
-}
-
-.responsive-bg h1 {
-    position: relative;
-    z-index: 2;
-    color: white;
-    text-align: center;
-    padding-top: 20vh;
-}
-
 #body-services {
     height: 100vh;
     display: flex;
@@ -459,42 +399,6 @@ footer {
     font-weight: 600;
     margin-bottom: 30px;
 }
-
-/* page A propos*/
-#div1 {
-    position: relative;
-    height: 1000px;
-    max-width: 100%;
-    margin: 50px;
-    padding: 40px;
-    border: 0px;
-    background-image: url(/assets/images/histoire-7.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-#div2 {
-    padding: 150px;
-    position: absolute;
-    border: 0px;
-    background-color: #0b4b5f;
-    transform: rotateY(60deg);
-    transform-style: preserve-3d;
-    opacity: 0.7;
-}
-
-#div3 {
-    padding: 40px;
-    position: absolute;
-    border: 1px solid black;
-    background-color: yellow;
-    transform: rotateY(-60deg);
-    opacity: 0.7;
-}
-
-/* fin page A propos */
-
 /* Page Services */
 .gd-results {
     padding: 96px;
@@ -1044,29 +948,10 @@ ul {
     gap: 20px;
     /* Espace entre les colonnes */
 }
-
-/* Donne la même largeur aux 3 colonnes (33% chacune) */
-.colonne {
-    flex: 1;
-    padding: 15px;
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
-}
-
-/* LA RÈGLE MAGIQUE : Empêche l'image de dépasser */
-.colonne img {
-    max-width: 100%;
-    display: block;
-    /* Supprime l'espace vide sous l'image */
-    margin: 0 auto;
-    /* Centre l'image horizontalement */
-}
-
 /* Page Témoignages */
 .bi-star-fill {
     color: #ffc107 !important;
 }
-
 
 /* page index - section ce que je vous apporte */
 #serviceModalBody {
@@ -1081,7 +966,7 @@ ul {
 /* image de fond */
 .img-connexion{
 background: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.65));
-background-image: url(/assets/images/pexels-diva-33485191.jpg);
+background-image: url(/assets/images/pexels-diva-33485191.webp);
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -1096,7 +981,7 @@ border: 1px solid rgba(255, 255, 255, 0.45);
 /* Page Inscription image de fond */
 .img-inscription{
 background: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.65));
-background-image: url(/assets/images/pexels-reilua-s-86001814-33723201.jpg);
+background-image: url(/assets/images/pexels-reilua-s-86001814-33723201.webp);
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;

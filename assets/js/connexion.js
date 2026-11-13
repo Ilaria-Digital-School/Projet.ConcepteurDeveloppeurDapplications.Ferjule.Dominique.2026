@@ -1,9 +1,3 @@
-document.querySelector(".scroll-top").addEventListener("click", function () {
-  window.scrollTo({
-    top: 0
-  })
-})
-
 // Récupération contenu champ formulaire
 const formulaire = document.getElementById('formulaire-inscription');
 const champEmail = document.getElementById('champ-email');
@@ -117,7 +111,7 @@ formulaire.addEventListener('submit', (event) => {
   event.preventDefault();
   //
   // stockage dans local storage de l'utilisateur en vue dialogue avec database
-  localStorage.setItem("Email",champEmail.value);  
+  localStorage.setItem("Email",JSON.stringify(champEmail.value));  
   //
   // À retirer pour un vrai envoi serveur
   alert('Message en attente vrai envoi vers serveur : Formulaire valide et envoyé ! Accès à votre compte validé');

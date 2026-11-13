@@ -49,6 +49,7 @@ const modalBody = document.getElementById('serviceModalBody');
 //(service, index) : fonction fléchée exécutée pour chaque élément du tableau
 // service : représente l'élément actuel en cours de traitement
 // index : indique la position de l'élément traité(0, 1, 2...)
+if(container){
 container.innerHTML = servicesData.map((service, index) => `
     <div class="col">
       <div class="card h-100 d-flex flex-column">
@@ -86,5 +87,4 @@ container.addEventListener('click', (e) => {
     modalBody.textContent = serviceSelected.description;
   }
 });
-
-
+}

@@ -12,7 +12,7 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
     <meta name="description" content="Coach professionnelle qui accompagne une personne en recherche d'emploi">
     <meta name="keywords"
         content="coach professionnelle, accompagnement, recherche emploi, personnel, collectif, soutien">
-    <title>Em' Coaching Pro - Accueil</title>
+    <title>Em' Coaching Pro - Inscription</title>
     <!-- Lien Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
@@ -30,7 +30,7 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
             <nav class="navbar md:navbar-expand bg-1" data-bs-theme="dark">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
-                        <img src="/assets/images/logoemcoach.png" alt="Logo entreprise"
+                        <img src="/assets/images/logoemcoach.webp" alt="Logo entreprise"
                             class="d-inline-block align-text-top" id="logo">
                     </a>
                     <a class="navbar-brand color-titrelogo" href="#" id="nomSociete">
@@ -92,95 +92,109 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                                     </div>
                                     <!-- Votre formulaire -->
                                     <form id="formulaire-inscription">
-                                        <!-- Champ Nom -->
-                                        <div class="form-field mb-3">
-                                            <label for="champ-nom" class="form-label fw-semibold">Nom</label>
-                                            <input type="text" class="form-control form-control-lg" id="champ-nom"
-                                                autocomplete="off" placeholder="Saisissez votre nom">
-                                            <span id="statut-nom" class="d-block small mt-1"></span>
-                                        </div>
-                                        <!-- Champ Email -->
-                                        <div class="form-field mb-3">
-                                            <label for="champ-email" class="form-label fw-semibold">Adresse
-                                                email</label>
-                                            <input type="email" class="form-control form-control-lg" id="champ-email"
-                                                autocomplete="off" placeholder="email@exemple.com">
-                                            <span id="statut-email" class="d-block small mt-1"></span>
-                                        </div>
+                                        <div class="form-group mb-3">
+                                        <label class="form-label fw-semibold">Genre :</label>
 
-                                        <!-- Champ Mot de passe -->
-                                        <div class="form-field mb-3">
-                                            <label for="champ-mdp" class="form-label fw-semibold">Mot de passe</label>
-                                            <div class="input-group input-group-lg">
-                                                <input type="password" class="form-control" id="champ-mdp"
-                                                    autocomplete="off" placeholder="Mot de passe">
-                                                <button class="btn-outline theme-secondary fs-6" type="button"
-                                                    id="toggle-mdp">
-                                                    👁️ Afficher
-                                                </button>
+                                        <div class="d-flex flex-wrap gap-3">
+                                            <div class="form-field form-field-card flex-fill">
+                                                <input class="radio theme-primary" type="radio" id="femme" name="genre" value="femme">
+                                                <label for="femme">Femme</label>
                                             </div>
-                                            <span id="statut-mdp" class="d-block small mt-1"></span>
 
-                                            <!-- Encadré des critères -->
-                                            <div class="bg-2 rounded-3 p-3 mt-2 border">
-                                                <p class="small fw-semibold fg-2 mb-2">Le mot de passe doit contenir :
-                                                </p>
-                                                <ul id="criteres-mdp"
-                                                    class="list-unstyled mb-0 small d-flex flex-column gap-1 fw-medium">
-                                                    <li id="critere-longueur" class="fg-danger">❌ Au moins 8 caractères
-                                                    </li>
-                                                    <li id="critere-majuscule" class="fg-danger">❌ Au moins une lettre
-                                                        majuscule</li>
-                                                    <li id="critere-chiffre" class="fg-danger">❌ Au moins un chiffre
-                                                    </li>
-                                                    <li id="critere-special" class="fg-danger">❌ Au moins un caractère
-                                                        spécial (!@#$%^&*)</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!-- Champ Confirmer le mot de passe -->
-                                        <div class="form-field mb-3">
-                                            <label for="champ-mdp-confirm" class="form-label fw-semibold">Confirmer le
-                                                mot de passe</label>
-                                            <div class="input-group input-group-lg">
-                                                <input type="password" class="form-control" id="champ-mdp-confirm"
-                                                    autocomplete="off" placeholder="Confirmer le mot de passe">
-                                                <button class="btn-outline theme-secondary fs-6" type="button"
-                                                    id="toggle-mdp-confirm">
-                                                    👁️ Afficher
-                                                </button>
-                                            </div>
-                                            <span id="statut-mdp-confirm" class="d-block small mt-1"></span>
-                                        </div>
-                                        <!-- Case à cocher -->
-                                        <div class="mb-4">
-                                            <div class="form-check">
-                                                <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                                                <label class="form-check-label fg-2 fw-medium" for="dropdownCheck">
-                                                    Se souvenir de moi
-                                                </label>
+                                            <div class="form-field form-field-card flex-fill">
+                                                <input class="radio theme-primary" type="radio" id="homme" name="genre" value="homme">
+                                                <label for="homme">Homme</label>
                                             </div>
                                         </div>
 
-                                        <!-- Bouton de validation (sans .btn devant .btn-solid) -->
-                                        <div class="d-grid">
-                                            <button type="submit"
-                                                class="btn-solid theme-primary btn-lg fw-semibold shadow-sm"
-                                                id="btn-submit" disabled>
-                                                Se connecter
-                                            </button>
-                                        </div>
-
-                                    </form>
-                                    <!-- Fin du formulaire -->
-
+                                        <span id="statut-genre" class="d-block small mt-1"></span>
                                 </div>
-                            </div>
-                            <!-- Fin de la carte -->
+                                <!-- Champ Nom -->
+                                <div class="form-field mb-3">
+                                    <label for="champ-nom" class="form-label fw-semibold">Nom :</label>
+                                    <input type="text" class="form-control form-control-lg" id="champ-nom"
+                                        autocomplete="off" placeholder="Saisissez votre nom">
+                                    <span id="statut-nom" class="d-block small mt-1"></span>
+                                </div>
+                                <!-- Champ Email -->
+                                <div class="form-field mb-3">
+                                    <label for="champ-email" class="form-label fw-semibold">Email :</label>
+                                    <input type="email" class="form-control form-control-lg" id="champ-email"
+                                       name="email" autocomplete="off" placeholder="email@exemple.com">
+                                    <span id="statut-email" class="d-block small mt-1"></span>
+                                </div>
 
+                                <!-- Champ Mot de passe -->
+                                <div class="form-field mb-3">
+                                    <label for="champ-mdp" class="form-label fw-semibold">Mot de passe :</label>
+                                    <div class="input-group input-group-lg">
+                                        <input type="password" class="form-control" id="champ-mdp" autocomplete="off"
+                                           name="password" placeholder="Mot de passe">
+                                        <button class="btn-outline theme-secondary fs-6" type="button" id="toggle-mdp">
+                                            👁️ Afficher
+                                        </button>
+                                    </div>
+                                    <span id="statut-mdp" class="d-block small mt-1"></span>
+
+                                    <!-- Encadré des critères -->
+                                    <div class="bg-2 rounded-3 p-3 mt-2 border">
+                                        <p class="small fw-semibold fg-2 mb-2">Le mot de passe doit contenir :
+                                        </p>
+                                        <ul id="criteres-mdp"
+                                            class="list-unstyled mb-0 small d-flex flex-column gap-1 fw-medium">
+                                            <li id="critere-longueur" class="fg-danger">❌ Au moins 8 caractères
+                                            </li>
+                                            <li id="critere-majuscule" class="fg-danger">❌ Au moins une lettre
+                                                majuscule</li>
+                                            <li id="critere-chiffre" class="fg-danger">❌ Au moins un chiffre
+                                            </li>
+                                            <li id="critere-special" class="fg-danger">❌ Au moins un caractère
+                                                spécial (!@#$%^&*)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Champ Confirmer le mot de passe -->
+                                <div class="form-field mb-3">
+                                    <label for="champ-mdp-confirm" class="form-label fw-semibold">Confirmer le
+                                        mot de passe :</label>
+                                    <div class="input-group input-group-lg">
+                                        <input type="password" class="form-control" id="champ-mdp-confirm"
+                                           name="passwordconfirm" autocomplete="off" placeholder="Confirmer le mot de passe">
+                                        <button class="btn-outline theme-secondary fs-6" type="button"
+                                            id="toggle-mdp-confirm">
+                                            👁️ Afficher
+                                        </button>
+                                    </div>
+                                    <span id="statut-mdp-confirm" class="d-block small mt-1"></span>
+                                </div>
+                                <!-- Case à cocher -->
+                                <div class="mb-4">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                                        <label class="form-check-label fg-2 fw-medium" for="dropdownCheck">
+                                            Se souvenir de moi
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Bouton de validation (sans .btn devant .btn-solid) -->
+                                <div class="d-grid">
+                                    <button type="submit" class="btn-solid theme-primary btn-lg fw-semibold shadow-sm"
+                                        id="btn-submit" disabled>
+                                        Se connecter
+                                    </button>
+                                </div>
+
+                                </form>
+                                <!-- Fin du formulaire -->
+
+                            </div>
                         </div>
+                        <!-- Fin de la carte -->
+
                     </div>
                 </div>
+            </div>
 
             </div>
         </section>
@@ -235,6 +249,7 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
     <script type="module"
         src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/assets/js/inscription.js"></script>
+    <script src="/assets/js/main.js"></script>
 </body>
 
 </html>

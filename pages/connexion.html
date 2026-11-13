@@ -12,7 +12,7 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
     <meta name="description" content="Coach professionnelle qui accompagne une personne en recherche d'emploi">
     <meta name="keywords"
         content="coach professionnelle, accompagnement, recherche emploi, personnel, collectif, soutien">
-    <title>Em' Coaching Pro - Accueil</title>
+    <title>Em' Coaching Pro - Connexion</title>
     <!-- Lien Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
@@ -30,7 +30,7 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
             <nav class="navbar md:navbar-expand bg-1" data-bs-theme="dark">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
-                        <img src="/assets/images/logoemcoach.png" alt="Logo entreprise"
+                        <img src="/assets/images/logoemcoach.webp" alt="Logo entreprise"
                             class="d-inline-block align-text-top" id="logo">
                     </a>
                     <a class="navbar-brand color-titrelogo" href="#" id="nomSociete">
@@ -90,23 +90,22 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                                         <h1 class="card-title fw-bold mb-1 color-titrelogo">Connexion</h1>
                                         <p class="fg-3 small mb-0">Accédez à votre espace personnel</p>
                                     </div>
-                                    <!-- Votre formulaire -->
+                                    <!-- Formulaire -->
                                     <form id="formulaire-inscription">
                                         <!-- Champ Email -->
                                         <div class="form-field mb-3">
                                             <label for="champ-email" class="form-label fw-semibold">Adresse
                                                 email</label>
                                             <input type="email" class="form-control form-control-lg" id="champ-email"
-                                                autocomplete="email" placeholder="email@exemple.com">
+                                                name="email" autocomplete="email" placeholder="email@exemple.com">
                                             <span id="statut-email" class="d-block small mt-1"></span>
                                         </div>
-
                                         <!-- Champ Mot de passe -->
                                         <div class="form-field mb-3">
                                             <label for="champ-mdp" class="form-label fw-semibold">Mot de passe</label>
                                             <div class="input-group input-group-lg">
                                                 <input type="password" class="form-control" id="champ-mdp"
-                                                    autocomplete="current-password" placeholder="Mot de passe">
+                                                    name="password" autocomplete="current-password" placeholder="Mot de passe">
                                                 <button class="btn-outline theme-secondary fs-6" type="button"
                                                     id="toggle-mdp">
                                                     👁️ Afficher
@@ -151,17 +150,12 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                                             </button>
                                         </div>
 
-                                    </form>
-                                    <!-- Fin du formulaire -->
-
+                                    </form>                
                                 </div>
-                            </div>
-                            <!-- Fin de la carte -->
-
+                            </div>         
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     </main>
@@ -216,6 +210,7 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
     <script type="module"
         src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/assets/js/connexion.js"></script>
+     <script src="/assets/js/main.js"></script>
 </body>
 
 </html>

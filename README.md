@@ -71,4 +71,29 @@ Utilisation du langage Javascript pour :
 dans la page HTML "index.html" dans la section "Ce que j'apporte" : affichage d'un texte lorsque l'utilisateur clique sur le bouton "en savoir plus". 
 dans les pages "inscription" et "connexion" : contrôler en temps réel la saisie des informations : nom, mot de passe, email ; vérifier la correspondance entre le mot de passe "initial" et le mot de passe confirmé. Tant que les éléments nom, email, mots de passe ne sont pas validés (messages dynamiques sur écran de l'utilisateur), celui-ci ne peut ni s'isncrire, ni se connecter.  
 
-C5 - ...
+13/11/2026 - Actions réalisées : 
+main.js chargé par les pages mais ajout test "if container...",
+ajout attribut "name" dans champs email et mdp,
+suppression pages admin et contact,
+modification des titres des pages,
+éco-conception : 
+    suppression images inutilisées,
+    utilisation outil Squoosh pour réduction taille image
+
+Pour la suite : 
+Choix technologies Back-End : 
+    bloc C2 : Node JS pur
+    Base de données : SQL
+    bloc C3 : Framework Express - schéma d'architecture en couches 
+Prochaines actions : 
+    réalisation MCD, MLD, Normalisation
+    utilisation outil : Looping
+    simulation avec outil Postman
+    réalisation base de données SQL
+    tests gestion des rôles Admin et Utilisateur
+    affichage pages en fonction du rôle : RACI
+        admin => pages d'administration (user, rendez-vous, services, témoignages)
+        user => pages dashboard (suivi coaching, témoignage) 
+   
+
+

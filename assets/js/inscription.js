@@ -1,9 +1,3 @@
-document.querySelector(".scroll-top").addEventListener("click", function () {
-  window.scrollTo({
-    top: 0
-  })
-})
-
 // Récupération contenu champ formulaire
 const formulaire = document.getElementById('formulaire-inscription');
 const champEmail = document.getElementById('champ-email');
@@ -17,6 +11,10 @@ const btnSubmit = document.getElementById('btn-submit');
 const inputConfirm = document.getElementById('champ-mdp-confirm');
 const toggleConfirm = document.getElementById('toggle-mdp-confirm');
 const statutConfirm = document.getElementById('statut-mdp-confirm');
+
+// Sélection des éléments du DOM
+const radiosGenre = document.querySelectorAll('input[name="genre"]');
+const statutGenre = document.getElementById('statut-genre');
 
 // Récupération des éléments de la liste
 const critereLongueur = document.getElementById('critere-longueur');
@@ -37,7 +35,7 @@ function majCritere(element, estValide, texte) {
 // Fonction centrale qui active ou désactive le bouton d'envoi "se connecter"
 function majBoutonEnvoi() {
   // console.log('mail', etatFormulaire.email, 'mdp', etatFormulaire.mdp, 'nom', etatFormulaire.nom);
-  const toutEstValide = etatFormulaire.email && etatFormulaire.mdp && etatFormulaire.nom && etatFormulaire.mdpConfirm;
+  const toutEstValide = etatFormulaire.genre && etatFormulaire.email && etatFormulaire.mdp && etatFormulaire.nom && etatFormulaire.mdpConfirm;
   // Si tout est valide (true), !toutEstValide vaut false, donc btnSubmit.disabled = false (le bouton s'active).
   btnSubmit.disabled = !toutEstValide;
 }
@@ -73,7 +71,8 @@ const etatFormulaire = {
   email: false,
   mdp: false,
   nom: false,
-  mdpConfirm:false
+  mdpConfirm:false,
+  genre:false
 };
 
 
@@ -96,7 +95,7 @@ champEmail.addEventListener('input', () => {
   // par regex.
   // etatformulaire : booléen true ou false  
   etatFormulaire.email = regexEmail.test(champEmail.value.trim());
-  document.getElementById('statut-email').textContent = etatFormulaire.email ? '✅' : '❌';
+  document.getElementById('statut-email').textContent = etatFormulaire.email ? '✅' : '❌ email incorrect';
   majBoutonEnvoi();
 });
 //
@@ -177,6 +176,32 @@ champNom.addEventListener('input', () => {
   majBoutonEnvoi();
 });
 //
+// Genre - Contrôle saisie des boutons radio 
+//
+// Fonction de vérification
+function verifierGenre() {
+  const boutonCoche = document.querySelector('input[name="genre"]:checked');
+//
+  if (boutonCoche) {
+    // Un bouton est coché : on affiche sa valeur
+    statutGenre.textContent = '✅';    
+    statutGenre.className = 'd-block small mt-1 text-success';
+    etatFormulaire.genre = true;
+  } else {
+    // Aucun bouton n'est coché    
+    statutGenre.textContent = '❌ Veuillez sélectionner votre genre.';
+    statutGenre.className = 'd-block small mt-1 text-danger';
+    etatFormulaire.genre = false;
+  } 
+   majBoutonEnvoi();
+}
+//
+// Écouter chaque changement de sélection en temps réel
+//
+radiosGenre.forEach(radio => {
+  radio.addEventListener('change', verifierGenre);
+});
+//
 // 4. Double sécurité lors de la soumission (ex: touche Entrée)
 //
 formulaire.addEventListener('submit', (event) => {
@@ -184,6 +209,11 @@ formulaire.addEventListener('submit', (event) => {
     event.preventDefault();
     return;
   }
+  //
+  // stockage dans local storage de l'utilisateur en vue dialogue avec database
+  localStorage.setItem("Email",JSON.stringify(champEmail.value)); 
+  localStorage.setItem("Nom",JSON.stringify(champNom.value));  
   event.preventDefault(); // À retirer pour un vrai envoi serveur
   alert('Message en attente vrai envoi vers serveur : Formulaire valide et envoyé ! Inscription presque validée !');
 });
+
