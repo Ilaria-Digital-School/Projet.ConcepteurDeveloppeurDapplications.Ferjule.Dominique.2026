@@ -63,10 +63,14 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                                     <a class="nav-link" href="/pages/rendezvous.html">Prendre rendez-vous</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Mon compte</a>
-                                </li>
-                                   <li class="nav-item">
-                                    <a class="nav-link" href="/pages/inscription.html">Inscription</a>
+                                    <a class="nav-link" href="#" role="button" data-bs-toggle="menu"
+                                        data-bs-placement="right-start" aria-expanded="false">
+                                        Accès
+                                    </a>
+                                    <div class="menu">
+                                        <a class="menu-item nav-link active" aria-current="page" href="#">Mon compte</a>
+                                        <a class="menu-item nav-link"  href="/pages/inscription.html">Inscription</a>
+                                    </div>
                                 </li>
                             </ul>                            
                         </div>
@@ -76,9 +80,9 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
         </div>
     </header>
     <main>
-        <section id="bg-connexion">
+        <section>
             <!-- Conteneur plein écran avec image de fond -->
-            <div class="min-vh-100 d-flex align-items-center py-5 img-connexion">                
+            <div class="min-vh-100 d-flex align-items-center py-5 fond-stats">                
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-12 md:col-8 lg:col-5">
@@ -111,24 +115,7 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                                                     👁️ Afficher
                                                 </button>
                                             </div>
-                                            <span id="statut-mdp" class="d-block small mt-1"></span>
-
-                                            <!-- Encadré des critères -->
-                                            <div class="bg-2 rounded-3 p-3 mt-2 border">
-                                                <p class="small fw-semibold fg-2 mb-2">Le mot de passe doit contenir :
-                                                </p>
-                                                <ul id="criteres-mdp"
-                                                    class="list-unstyled mb-0 small d-flex flex-column gap-1 fw-medium">
-                                                    <li id="critere-longueur" class="fg-danger">❌ Au moins 8 caractères
-                                                    </li>
-                                                    <li id="critere-majuscule" class="fg-danger">❌ Au moins une lettre
-                                                        majuscule</li>
-                                                    <li id="critere-chiffre" class="fg-danger">❌ Au moins un chiffre
-                                                    </li>
-                                                    <li id="critere-special" class="fg-danger">❌ Au moins un caractère
-                                                        spécial (!@#$%^&*)</li>
-                                                </ul>
-                                            </div>
+                                            <span id="statut-mdp" class="d-block small mt-1"></span>                                            
                                         </div>
 
                                         <!-- Case à cocher -->

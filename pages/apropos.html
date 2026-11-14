@@ -62,10 +62,14 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                                     <a class="nav-link" href="/pages/rendezvous.html">Prendre rendez-vous</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/pages/connexion.html">Mon compte</a>
-                                </li>
-                                   <li class="nav-item">
-                                    <a class="nav-link" href="/pages/inscription.html">Inscription</a>
+                                    <a class="nav-link" href="#" role="button" data-bs-toggle="menu"
+                                        data-bs-placement="right-start" aria-expanded="false">
+                                        Accès
+                                    </a>
+                                    <div class="menu">
+                                        <a class="menu-item nav-link" href="/pages/connexion.html">Mon compte</a>
+                                        <a class="menu-item nav-link" href="/pages/inscription.html">Inscription</a>
+                                    </div>
                                 </li>
                             </ul>                            
                         </div>
@@ -114,24 +118,26 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                     <p class="fw-bold mb-2">Suivez-moi</p>
                     <ul class="list-inline social-icons mb-0">
                         <li class="list-inline-item mx-2">
-                            <a href="pages/rendezvous.html" rel="noreferrer" class="text-dark fs-4">
+                            <a aria-label="facebook" href="pages/rendezvous.html" rel="noreferrer"
+                                class="text-dark fs-4">
                                 <i class="fa-brands fa-facebook"></i>
                             </a>
                         </li>
                         <li class="list-inline-item mx-2">
-                            <a href="https://www.linkedin.com/in/dominique-ferjule-4043803aa" rel="noopener noreferrer"
-                                class="text-dark fs-4">
+                            <a aria-label="linkedin" href="https://www.linkedin.com/in/dominique-ferjule-4043803aa"
+                                rel="noopener noreferrer" class="text-dark fs-4">
                                 <i class="fa-brands fa-square-linkedin"></i>
                             </a>
                         </li>
                         <li class="list-inline-item mx-2">
-                            <a href="pages/apropos.html" rel="noreferrer" class="text-dark fs-4">
+                            <a aria-label="linkedin" href="pages/apropos.html" rel="noreferrer" class="text-dark fs-4">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
+
 
             <hr class="my-4 text-muted">
 

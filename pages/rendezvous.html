@@ -63,10 +63,14 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                                     <a class="nav-link active" aria-current="page" href="#">Prendre rendez-vous</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/pages/connexion.html">Mon compte</a>
-                                </li>
-                                   <li class="nav-item">
-                                    <a class="nav-link" href="/pages/inscription.html">Inscription</a>
+                                    <a class="nav-link" href="#" role="button" data-bs-toggle="menu"
+                                        data-bs-placement="right-start" aria-expanded="false">
+                                        Accès
+                                    </a>
+                                    <div class="menu">
+                                        <a class="menu-item nav-link" href="/pages/connexion.html">Mon compte</a>
+                                        <a class="menu-item nav-link" href="/pages/inscription.html">Inscription</a>
+                                    </div>
                                 </li>
                             </ul>                            
                         </div>
@@ -76,7 +80,7 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
         </div>
     </header>
     <main> <!--Début Rendez-Vous-->
-        <section class="section">
+        <section class="section fond-stats">
             <div class="container hero-content text-center">
                 <div id="titre-site">
                     <h1 class="fw-bold color-titrelogo"><span>📅 Rendez-</span><span class="text-client">Vous</span>

@@ -6,12 +6,6 @@ const btnToggle = document.getElementById('toggle-mdp');
 const statMdp = document.getElementById('statut-mdp');
 const btnSubmit = document.getElementById('btn-submit');
 
-// Récupération des éléments de la liste
-const critereLongueur = document.getElementById('critere-longueur');
-const critereMajuscule = document.getElementById('critere-majuscule');
-const critereChiffre = document.getElementById('critere-chiffre');
-const critereSpecial = document.getElementById('critere-special');
-
 // Fonction utilitaire pour mettre à jour l'affichage d'un critère
 function majCritere(element, estValide, texte) {
   if (estValide) {
@@ -32,21 +26,10 @@ function majBoutonEnvoi() {
 
 champMdp.addEventListener('input', (event) => {
   const valeur = event.target.value;
-
-  // 1. Vérification de chaque règle via des Regex simples
-  const aLongueur = valeur.length >= 8;
-  const aMajuscule = /[A-Z]/.test(valeur);
-  const aChiffre = /[0-9]/.test(valeur);
-  const aSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(valeur);
-
-  // 2. Mise à jour de chaque ligne
-  majCritere(critereLongueur, aLongueur, 'Au moins 8 caractères');
-  majCritere(critereMajuscule, aMajuscule, 'Au moins une lettre majuscule');
-  majCritere(critereChiffre, aChiffre, 'Au moins un chiffre');
-  majCritere(critereSpecial, aSpecial, 'Au moins un caractère spécial (!@#$%^&*)');
-
-  // 3. Bordure globale du champ
-  if (aLongueur && aMajuscule && aChiffre && aSpecial) {
+  // Vérification saisie mot de passe
+  const aLongueur = valeur.length >= 1;  
+  // Bordure globale du champ
+  if (aLongueur) {
     champMdp.style.borderColor = 'green';
     etatFormulaire.mdp = true;
   } else {
@@ -60,6 +43,7 @@ const etatFormulaire = {
   email: false,
   mdp: false 
 };
+
 
 
 // 1. Validation de l'e-mail
@@ -81,7 +65,7 @@ champEmail.addEventListener('input', () => {
   // par regex.
   // etatformulaire : booléen true ou false  
   etatFormulaire.email = regexEmail.test(champEmail.value.trim());
-  document.getElementById('statut-email').textContent = etatFormulaire.email ? '✅' : '❌';
+  document.getElementById('statut-email').textContent = etatFormulaire.email ? '✅' : '❌ email incorrect';
   majBoutonEnvoi();
 });
 //
@@ -101,7 +85,7 @@ btnToggle.addEventListener('click', () => {
   }
 });
 //
-// 4. Double sécurité lors de la soumission (ex: touche Entrée)
+// Double sécurité lors de la soumission (ex: touche Entrée)
 //
 formulaire.addEventListener('submit', (event) => {
   if (btnSubmit.disabled) {
@@ -111,7 +95,9 @@ formulaire.addEventListener('submit', (event) => {
   event.preventDefault();
   //
   // stockage dans local storage de l'utilisateur en vue dialogue avec database
+  // attention c'est juste pour voir comment fonctionne la localstorage
   localStorage.setItem("Email",JSON.stringify(champEmail.value));  
+  localStorage.setItem("Mdp",JSON.stringify(champMdp.value));
   //
   // À retirer pour un vrai envoi serveur
   alert('Message en attente vrai envoi vers serveur : Formulaire valide et envoyé ! Accès à votre compte validé');
