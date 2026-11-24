@@ -5,4 +5,5 @@ test.html
 assets\images\IMG_20260113_225747.jpg
 assets/js/test.js
 assets/js/connexioncopy.js
-/backend/
+/backend/node_modules
+assets/pdf/mentions_légales.docx

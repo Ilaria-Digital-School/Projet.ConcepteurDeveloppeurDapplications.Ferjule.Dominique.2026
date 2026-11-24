@@ -9,7 +9,7 @@ The width=device-width part sets the width of the page to follow the screen-widt
 The initial-scale=1 part sets the initial zoom level when the page is first loaded by the browser.-->
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO -->
-    <meta name="description" content="Coach professionnelle certifiée">
+    <meta name="description" content="Page accueil site Em coaching Pro">
     <meta name="keywords"
         content="coach professionnelle, accompagnement, personnel, collectif, soutien parent">
     <title>Em' Coaching Pro - Accueil</title>
@@ -72,6 +72,9 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                                         <a class="menu-item nav-link" href="pages/inscription.html">Inscription</a>
                                     </div>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/typeaccompagnement.html">Administration</a>
+                                </li>                                
                             </ul>
                         </div>
                     </dialog>
@@ -111,7 +114,6 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                 </div>
             </div>
         </section>
-
         <section class="section">
             <div class="container my-5 py-5">
                 <div class="row text-center mb-5">
@@ -123,7 +125,6 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                 <div class="row row-cols-1 md:row-cols-2 g-6" id="cards-container"></div>
             </div>
         </section>
-
         <!-- Modale v6 utilisant la balise native <dialog> -->
         <dialog class="dialog dialog-lg" id="serviceModal">
             <div class="dialog-header">
@@ -328,6 +329,7 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
     </main>
     <button aria-label="buttontop" class="scroll-top" id="monBouton"><i class="fa-solid fa-arrow-up"></i></button>
     <!-- Pied de page -->
+    <!-- Pied de page -->
     <footer class="mt-auto bg-light py-4">
         <div class="container">
             <!-- Première ligne : Réseaux Sociaux -->
@@ -337,30 +339,29 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                     <ul class="list-inline social-icons mb-0">
                         <li class="list-inline-item mx-2">
                             <a aria-label="facebook" href="https://www.facebook.com/dominique.ferjule" rel="noreferrer"
-                                class="text-dark fs-4">
+                                class="text-dark fs-4" target="_blank">
                                 <i class="fa-brands fa-facebook"></i>
                             </a>
                         </li>
                         <li class="list-inline-item mx-2">
                             <a aria-label="linkedin" href="https://www.linkedin.com/in/dominique-ferjule-4043803aa"
-                                rel="noopener noreferrer" class="text-dark fs-4">
+                                rel="noopener noreferrer" class="text-dark fs-4" target="_blank">
                                 <i class="fa-brands fa-square-linkedin"></i>
                             </a>
-                        </li>                        
+                        </li>
                     </ul>
                 </div>
             </div>
-
             <hr class="my-4 text-muted">
-
             <!-- Deuxième ligne : Crédits & Liens légaux -->
             <div class="row text-black justify-content-center gy-2">
                 <div class="col-md-4 text-center">
                     <p class="mb-0"><i class="fa-regular fa-copyright"></i> 2026 - Em'Coaching Pro</p>
                 </div>
                 <div class="col-md-3 text-center">
-                    <p class="mb-0"><a href="pages/mentions.html" class="text-decoration-none text-dark">Mentions légales & Politique de cookies</a></p>
-                </div>              
+                    <p class="mb-0"><a href="assets/pdf/mentions_legales.pdf" download="document.pdf" class="text-decoration-none text-dark">Mentions
+                            légales</a></p>
+                </div>
             </div>
         </div>
     </footer>
