@@ -1,7 +1,7 @@
 //adresse de destination (le endpoint) où les données seront envoyées.
 //le serveur local exécuté sur le port 3000, à la route /accompagnements.
 
-const API_URL = "http://localhost:3000/accompagnements";
+const API_URL = "http://localhost:3000/api/accompagnements";
 
 // Fonction pour ajouter des accompagnements
 // export : rend la fonction utilisable dans d'autres fichiers du projet.
@@ -13,14 +13,13 @@ const API_URL = "http://localhost:3000/accompagnements";
 //axios.post : Envoie une requête HTTP de type POST
 // (utilisée pour créer une nouvelle ressource) à l'adresse API_URL
 // avec les données accompagnementObj.
+//Axios envoie du JSON par défaut en convertissant l'objet d'abord
 // await : Met en pause l'exécution de la fonction en attendant que
 // le serveur réponde, puis stocke cette réponse complète dans la
 // variable reponse
-// return reponse.data;renvoie uniquement les données utiles retournées
-// par le serveur (souvent l'objet nouvellement créé avec son identifiant
-// unique), en ignorant les informations techniques de la requête HTTP
-// (comme les en-têtes ou le code de statut).
+// return reponse.data : propriété utilisée par la bibliothèque Axios pour stocker
+// les données renvoyées par l'API.
 export async function ajouterAccompagnementAPI(accompagnementObj) {
-    const reponse = await axios.post(API_URL, accompagnementObj);
-    return reponse.data;    
+    const reponse = await axios.post(API_URL, accompagnementObj);    
+    return reponse.data;        
     }   

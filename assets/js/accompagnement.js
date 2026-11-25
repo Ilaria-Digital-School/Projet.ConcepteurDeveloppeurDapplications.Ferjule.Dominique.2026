@@ -18,12 +18,12 @@ class Accompagnement {
   }
 }
 //
-let var1 = document.getElementById('champ-titre');
-let var2 = document.getElementById('champ-soustitre');
-let var3 = document.getElementById('champ-description');
-let var4 = document.getElementById('champ-icone');
-let btnSubmit = document.getElementById('btn-submit');
-let statForm = document.getElementById('statut-form');
+const var1 = document.getElementById('champ-titre');
+const var2 = document.getElementById('champ-soustitre');
+const var3 = document.getElementById('champ-description');
+const var4 = document.getElementById('champ-icone');
+const btnSubmit = document.getElementById('btn-submit');
+const statForm = document.getElementById('statut-form');
 
 const etatFormulaire = {
       champ1: false,
@@ -41,7 +41,7 @@ function majBoutonEnvoi() {
     statForm.className = 'd-block small mt-1 text-success fw-medium';
     btnSubmit.disabled = false;
   } else {    
-    statForm.textContent = '❌ Le formulaire est incomplet.';
+    statForm.textContent = '❌ Erreur, impossible de soumettre le formulaire';
     statForm.className = 'd-block small mt-1 text-success fw-medium';
     btnSubmit.disabled = true;
   }
@@ -51,13 +51,13 @@ function ajouterAccompagnement() {
   //
   // 1.Récupérer les valeurs du formulaire
   //
-  let form = document.getElementById('form');
+  const form = document.getElementById('form');
   if (form) {    
      btnSubmit.disabled = true;  
     //
     // État global de validation de chaque champ
-    //
-    const regexLettres = /^[a-zA-ZÀ-ÿ]+$/;
+    // impose que le texte commence et finisse par une lettre, tout en autorisant un espace, un tiret ou une apostrophe entre deux mots.
+    const regexLettres = /^[a-zA-ZÀ-ÿ]+(?:[ '-][a-zA-ZÀ-ÿ]+)*$/;
     var1.addEventListener('input', () => {
       // .trim() permet d'ignorer les espaces vides au début et à la fin
       const valeur = var1.value.trim();
@@ -66,8 +66,7 @@ function ajouterAccompagnement() {
       if (regexLettres.test(valeur)) {
         etatFormulaire.champ1 = true;
       } else {
-        etatFormulaire.champ1 = false;
-         console.log("vide1");
+        etatFormulaire.champ1 = false;     
       }
       majBoutonEnvoi();
     });
@@ -79,8 +78,7 @@ function ajouterAccompagnement() {
       if (regexLettres.test(valeur)) {
         etatFormulaire.champ2 = true;
       } else {
-        etatFormulaire.champ2 = false;
-           console.log("vide2");
+        etatFormulaire.champ2 = false;  
       }
       majBoutonEnvoi();
     });
@@ -92,12 +90,10 @@ function ajouterAccompagnement() {
       if (regexLettres.test(valeur)) {
         etatFormulaire.champ3 = true;
       } else {
-        etatFormulaire.champ3 = false;
-           console.log("vide3");
+        etatFormulaire.champ3 = false;  
       }
       majBoutonEnvoi();
     });
-
     var4.addEventListener('input', () => {
       // .trim() permet d'ignorer les espaces vides au début et à la fin
       const valeur = var4.value.trim();
@@ -107,7 +103,6 @@ function ajouterAccompagnement() {
         etatFormulaire.champ4 = true;
       } else {
         etatFormulaire.champ4 = false;
-           console.log("vide4");
       }
       majBoutonEnvoi();
     });
@@ -116,15 +111,18 @@ function ajouterAccompagnement() {
   // Double sécurité lors de la soumission (ex: touche Entrée)
   //
   if (form) {
-    form.addEventListener('submit', (event) => {
+    form.addEventListener('submit', async (event) => {
+       event.preventDefault();
       if (btnSubmit.disabled) {
-        event.preventDefault();
-      }
-      event.preventDefault();
-      // si tout est ok => création de l'accompagnement
+        return;
+      }   
+      // si bouton activé => création de l'accompagnement
       // 2.Regrouper les valeurs du formulaire dans un objet
-      let accompagnement = new Accompagnement(var1, var2, var3, var4);
-
+      const accompagnement = new Accompagnement(
+        var1.value,
+        var2.value,
+        var3.value,
+        var4.value);      
       // stockage dans local storage de l'utilisateur en vue dialogue avec database
       //localStorage.setItem("Icone",JSON.stringify(var4.value)); 
       //localStorage.setItem("Titre",JSON.stringify(var1.value));  
@@ -133,14 +131,13 @@ function ajouterAccompagnement() {
       //  event.preventDefault(); // À retirer pour un vrai envoi serveur
       //  alert('Avant envoi formulaire vers serveur : Accompagnement presque créé !');
       // Appel de l'accompagnement
-      try {
-        const nouveauAccompagnement = async () => {
+      try {       
           const nouveauAccompagnement = await ajouterAccompagnementAPI(accompagnement);
-        }; 
-        // form.reset();
+         console.log("Réponse du serveur après test :", nouveauAccompagnement);     
+        // form.reset();   
         alert("Accompagnement ajouté !");
       } catch (error) {
-        console.log(error);
+        console.log("Erreur détaillée : ", error);
         alert("Erreur lors de l'ajout de l'accompagnement !")
       }
     });
