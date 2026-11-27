@@ -6,6 +6,7 @@ import express from "express";
 // sans les accolades JS recherche export default
 import {addAccompagnement} from "../controllers/addaccompagnement.controller.js";
 import {listAccompagnement} from "../controllers/listaccompagnement.controller.js";
+import {deleteAccompagnement} from "../controllers/deleteaccompagnement.controller.js";
 //lien entre URLs et fonctions du contrôleur grâce à express.Router().
 const router = express.Router();
 //on ajoute l'action, le path (API) pour lancer la methode "addAccompagnement"
@@ -15,6 +16,8 @@ const router = express.Router();
 router.post("/accompagnements", addAccompagnement);
 //méthode : listAccompagnement
 router.get("/accompagnements", listAccompagnement);
+//méthode : deleteAccompagnement
+router.delete("/accompagnements/:id", deleteAccompagnement);
 
 // 1 default par fichier
 export default router;

@@ -133,8 +133,8 @@ function ajouterAccompagnement() {
       // Appel de l'accompagnement
       try {       
           const nouveauAccompagnement = await ajouterAccompagnementAPI(accompagnement);
-         console.log("Réponse du serveur après test :", nouveauAccompagnement);     
-        // form.reset();   
+//         console.log("Réponse du serveur après test :", nouveauAccompagnement);     
+        form.reset();   
         alert("Accompagnement ajouté !");
       } catch (error) {
         console.log("Erreur détaillée : ", error);

@@ -30,18 +30,17 @@ async function listerAccompagnementAPI() {
     }
 
     accompagnements.forEach(item => {
-      const li = document.createElement('li');
-      
+      const li = document.createElement('li');    
       li.innerHTML = `
         <div class="card testimonial-card text-center p-4">
-                    <div class="card-body">
-          <span class="icon">${item.icon || '📌'}</span>
+        <div class="card-body">
+          <span class="icon">${item.icone || '📌'}</span>
           <h2 class="titre">${item.titre || 'Sans titre'}</h2>
           <small class="text-muted">${item.sousTitre || 'Sans sous titre'}</small>
-          <p class="mt-3">${item.description || 'Sans description'}</p>       
+          <p class="mt-3">${item.description || 'Sans description'}</p> 
+
         </div>
-      `;
-      
+      `;    
       listeElement.appendChild(li);
     });
 
@@ -50,7 +49,10 @@ async function listerAccompagnementAPI() {
     statutElement.textContent = "Impossible de charger la liste. Vérifiez que votre serveur est lancé.";
     statutElement.classList.add('erreur');
   }
-}
+};
 
 // Déclencher la fonction uniquement lors du clic sur le bouton
 boutonCharger.addEventListener('click', listerAccompagnementAPI);
+
+ 
+
