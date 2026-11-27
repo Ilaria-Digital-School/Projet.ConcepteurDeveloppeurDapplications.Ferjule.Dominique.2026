@@ -32,13 +32,13 @@ async function chargerAccompagnements() {
       const li = document.createElement('li');
       // Ajout de data-id="${itemId}" sur le bouton de suppression
       li.innerHTML = `
-        <div class="card testimonial-card text-center p-4 position-relative">
-          <button type="button" data-id="${itemId}" class="btn-close position-absolute top-0 end-0 m-3 z-3 delete-btn" aria-label="Supprimer"></button>
+        <div class="card testimonial-card text-center p-4">
+          <button type="button" data-id="${itemId}" class="delete-btn theme-accent btn-solid" aria-label="Supprimer">Supprimer</button>
           <div class="card-body">
-            <span class="icon">${item.icone || '📌'}</span>
-            <h2 class="titre">${item.titre || 'Sans titre'}</h2>
-            <small class="text-muted">${item.sousTitre || 'Sans sous titre'}</small>
-            <p class="mt-3">${item.description || 'Sans description'}</p> 
+            <span class="icon">Icone : ${item.icone || '📌'}</span>
+            <h2 class="titre">Titre : ${item.titre || 'Sans titre'}</h2>
+            <small class="text-muted">Sous titre : ${item.sousTitre || 'Sans sous titre'}</small>
+            <p class="mt-3">Description : ${item.description || 'Sans description'}</p> 
           </div>
         </div>
       `;
