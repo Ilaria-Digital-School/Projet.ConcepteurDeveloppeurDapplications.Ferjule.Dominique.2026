@@ -13,15 +13,15 @@ class Accompagnement {
     sousTitreAccompagnement, descriptionAccompagnement) {
     this.icone = iconeAccompagnement;
     this.titre = titreAccompagnement;
-    this.soustitre = sousTitreAccompagnement,
+    this.sousTitre = sousTitreAccompagnement;
       this.description = descriptionAccompagnement;
   }
 }
 //
-const var1 = document.getElementById('champ-titre');
-const var2 = document.getElementById('champ-soustitre');
-const var3 = document.getElementById('champ-description');
-const var4 = document.getElementById('champ-icone');
+const var1 = document.getElementById('champ-icone');
+const var2 = document.getElementById('champ-titre');
+const var3 = document.getElementById('champ-soustitre');
+const var4 = document.getElementById('champ-description');
 const btnSubmit = document.getElementById('btn-submit');
 const statForm = document.getElementById('statut-form');
 
@@ -122,7 +122,7 @@ function ajouterAccompagnement() {
         var1.value,
         var2.value,
         var3.value,
-        var4.value);      
+        var4.value);              
       // stockage dans local storage de l'utilisateur en vue dialogue avec database
       //localStorage.setItem("Icone",JSON.stringify(var4.value)); 
       //localStorage.setItem("Titre",JSON.stringify(var1.value));  

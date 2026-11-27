@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 //créer une nouvelle instance (un nouveau objet) de schéma avec la structure 
     //Définition du schéma
 const accompagnementSchema = new mongoose.Schema({
-    icon: String,
+    icone: String,
     titre: String,
     sousTitre: String,
     description: String
