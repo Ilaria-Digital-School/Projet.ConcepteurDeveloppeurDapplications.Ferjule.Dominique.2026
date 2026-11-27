@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <!-- To ensure proper rendering and touch zooming,  
@@ -10,17 +11,18 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
     <!-- SEO -->
     <meta name="description" content="Création d'un service de coaching">
     <meta name="keywords" content="coach professionnelle, accompagnement, personnel, collectif, soutien parent">
-    <title>Em' Coaching Pro - Connexion</title>
+    <title>Liste des accompagnements</title>
     <!-- Lien Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-MKn5NWVBEuQXJE7TSKSgPUmMiSCmVTfCsR+VSSeQpHnoyJQZZFn/kBn+Ht5jZDPQ" crossorigin="anonymous">
     <!-- Lien CSS Bootstrap 6 CDN-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.2/dist/css/bootstrap.min.css">
     <!-- Lien vers fichier CSS -->
     <link rel="stylesheet" href="/assets/css/style2.css">
     <!-- Lien FontAwsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
+
 <body>
     <header>
         <!-- Menu de navigation simple -->
@@ -80,70 +82,21 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
     </header>
     <main>
         <section>
-            <!-- Conteneur plein écran avec image de fond -->
-            <div class="min-vh-100 d-flex align-items-center py-5 fond-stats">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-12 md:col-8 lg:col-5">
-                            <!-- Carte translucide native Bootstrap 6 -->
-                            <div class="card card-translucent shadow-lg rounded-4 card-connexion">
-                                <div class="card-body p-4 md:p-5">
-                                    <!-- En-tête de la carte -->
-                                    <div class="text-center mb-4">
-                                        <h1 class="card-title fw-bold mb-1 color-titrelogo">Ajout Service de coaching</h1>
-                                        <p class="fg-3 small mb-0"><em>Veuillez saisir : code icone, titre, sous titre,
-                                                description</em></p>
-                                    </div>
-                                    <!-- Formulaire -->
-                                    <form id="form">
-                                        <!-- Champ Intitulé du service -->
-                                         <div class="form-field mb-3">
-                                            <label for="champ-icone" class="form-label fw-semibold">Icone</label>
-                                            <input type="text" class="form-control form-control-lg" id="champ-icone"
-                                                name="icone-service" placeholder="Ex. : fa-hand-holding-heart"
-                                                minlength="2" maxlength="40" required>                                           
-                                        </div>
-                                        <div class="form-field mb-3">
-                                            <label for="champ-titre" class="form-label fw-semibold">Libellé</label>
-                                            <input type="text" class="form-control form-control-lg" id="champ-titre"
-                                                name="titre" placeholder="Ex. : Développement personnel"
-                                                minlength="5" maxlength="40" required>                                           
-                                        </div>
-                                        <div class="form-field mb-3">
-                                            <label for="champ-soustitre" class="form-label fw-semibold">
-                                                Sous libellé</label>
-                                            <input type="text" class="form-control form-control-lg" id="champ-soustitre"
-                                                name="soustitre" placeholder="Ex. : Vous épanouir"
-                                                minlength="5" maxlength="30" required>                                           
-                                        </div>
-                                        <div class="form-field mb-3">
-                                            <label for="champ-description" class="form-label fw-semibold">
-                                                Description</label>
-                                            <textarea class="form-control form-control-lg" id="champ-description"
-                                                name="description"
-                                                rows="2"                                            
-                                                placeholder="Écrivez votre texte ici..."                                             
-                                                required></textarea>                                           
-                                        </div>
-                                        
-                                        <!-- Bouton de création -->
-                                        <div class="d-grid">
-                                            <span id="statut-form" class="d-block small mt-1"></span>
-                                            <button type="submit"
-                                                class="btn-solid theme-primary btn-lg fw-semibold shadow-sm"
-                                                id="btn-submit">
-                                                Créer le service
-                                            </button>
-
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+            <section class="gd-results section fond-stats">
+                <div class="container hero-content text-center">
+                    <div id="titre-site" class="fw-bold color-titrelogo">
+                        <h1 class="fw-bold">Nos Accompagnements</h1>
                     </div>
                 </div>
-            </div>
-        </section>
+                <!-- Bouton pour déclencher le chargement -->
+                <div class="zone-bouton">
+                    <button id="btn-charger">Afficher les accompagnements</button>
+                </div>
+                <p id="statut"></p>
+                <div class="containerTemoignage my-5">
+                    <ul id="liste-accompagnements" class="content-section"></ul>
+                </div>
+            </section>
     </main>
     <button aria-label="buttontop" class="scroll-top" id="monBouton"><i class="fa-solid fa-arrow-up"></i></button>
     <!-- Pied de page -->
@@ -176,17 +129,20 @@ The initial-scale=1 part sets the initial zoom level when the page is first load
                     <p class="mb-0"><i class="fa-regular fa-copyright"></i> 2026 - Em'Coaching Pro</p>
                 </div>
                 <div class="col-md-3 text-center">
-                    <p class="mb-0"><a href="/assets/pdf/mentions_legales.pdf" download="document.pdf" class="text-decoration-none text-dark">Mentions
+                    <p class="mb-0"><a href="/assets/pdf/mentions_legales.pdf" download="document.pdf"
+                            class="text-decoration-none text-dark">Mentions
                             légales</a></p>
                 </div>
             </div>
         </div>
     </footer>
     <!-- Lien JS Bootstrap -->
-    <script type="module"
-        src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-+PW0IDVGGwmpaBQvcXY+W0BcpHpITFB3dSfSoGvDdHtLbrLpSbpGcvtQRM/BJpz+"
+        crossorigin="anonymous"></script>
     <!-- Axios -->
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script type="module" src="/assets/js/accompagnement.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="/assets/js/listaccompagnements.js"></script>
 </body>
+
 </html>

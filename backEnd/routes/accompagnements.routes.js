@@ -4,7 +4,8 @@
 import express from "express"; 
 // les accolades permettent d'exporter une fonctionnalité du fichier controller
 // sans les accolades JS recherche export default
-import {addAccompagnement} from "../controllers/accompagnement.controller.js";
+import {addAccompagnement} from "../controllers/addaccompagnement.controller.js";
+import {listAccompagnement} from "../controllers/listaccompagnement.controller.js";
 //lien entre URLs et fonctions du contrôleur grâce à express.Router().
 const router = express.Router();
 //on ajoute l'action, le path (API) pour lancer la methode "addAccompagnement"
@@ -12,6 +13,8 @@ const router = express.Router();
 // "/accompagnements" : url nom que je choisis qui doit être identique au front End
 //méthode : addAccompagnement
 router.post("/accompagnements", addAccompagnement);
+//méthode : listAccompagnement
+router.get("/accompagnements", listAccompagnement);
 
 // 1 default par fichier
 export default router;
